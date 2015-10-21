@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:UseCaseDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="umlUseCaseDiagram" id="{UMLID=_XsPAwFu6EeWDg8IX7lJlSw,JavaID=}" metadata="uml2-1.0" initialized="true" scrolledY="-10" tag="100" key="3230303730363239204D656E686972">
+  <children xsi:type="editmodel:UseCaseActorEditModel" name="Joueur" backgroundRGB="253,253,253" location="35,243" size="70,100" id="{UMLID=_dFC4gFu6EeWDg8IX7lJlSw}" itemName="Joueur">
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_3OCwQGazEeWM97N1KEdxjg}" source="//@children.0" target="//@children.3/@children.0" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="70,31" id="{UMLID=_3jgC4GazEeWM97N1KEdxjg}" attachSource="true" roleLabel="//@children.0/@sourceConnections.0/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="112,258" size="0,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="19,68" id="{UMLID=_3jgC42azEeWM97N1KEdxjg}" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="298,118" size="0,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=__KDkkGazEeWM97N1KEdxjg}" source="//@children.0" target="//@children.3/@children.2" targetEnd="//@children.0/@sourceConnections.1/@children.1" label="//@children.0/@sourceConnections.1/@children.2" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="70,40" id="{UMLID=__aJPAGazEeWM97N1KEdxjg}" attachSource="true" roleLabel="//@children.0/@sourceConnections.1/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="112,258" size="0,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="0,58" id="{UMLID=__aJPA2azEeWM97N1KEdxjg}" roleLabel="//@children.0/@sourceConnections.1/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="295,194" size="0,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_GWPecGa0EeWM97N1KEdxjg}" source="//@children.0" target="//@children.3/@children.3" targetEnd="//@children.0/@sourceConnections.2/@children.1" label="//@children.0/@sourceConnections.2/@children.2" sourceEnd="//@children.0/@sourceConnections.2/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="70,60" id="{UMLID=_HiOJYGa0EeWM97N1KEdxjg}" attachSource="true" roleLabel="//@children.0/@sourceConnections.2/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="75,348" size="0,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="0,28" id="{UMLID=_HiOJY2a0EeWM97N1KEdxjg}" roleLabel="//@children.0/@sourceConnections.2/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="303,282" size="0,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_tJmO0Ga-EeWM97N1KEdxjg}" source="//@children.0" target="//@children.3/@children.12" targetEnd="//@children.0/@sourceConnections.3/@children.1" label="//@children.0/@sourceConnections.3/@children.2" sourceEnd="//@children.0/@sourceConnections.3/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="70,61" id="{UMLID=_tybJYGa-EeWM97N1KEdxjg}" attachSource="true" roleLabel="//@children.0/@sourceConnections.3/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="75,348" size="0,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" location="0,1" id="{UMLID=_tybJY2a-EeWM97N1KEdxjg}" roleLabel="//@children.0/@sourceConnections.3/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" foregroundRGB="96,96,96" location="307,366" size="0,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:LabelObjectEditModel" location="70,343" size="0,15" fontInfo="Omondo_Font_Default-9-0" description="Stereotype" attachment="//@children.0"/>
+  <children xsi:type="editmodel:LabelObjectEditModel" name="Joueur" location="51,346" size="38,15" fontInfo="Omondo_Font_Default-9-0" description="Name" attachment="//@children.0"/>
+  <children xsi:type="editmodel:SystemEditModel" name="Jeu" location="181,0" size="1050,647" fontInfo="Omondo_Font_Default-8-1" stereotype="Application" id="{UMLID=__-SIQFu6EeWDg8IX7lJlSw}" itemName="Jeu">
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.0" name="Lancer une partie" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="115,89" size="161,68" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_s9qFkGazEeWM97N1KEdxjg}" itemName="Lancer une partie" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:IncludesEditModel" autoLocated="true" id="{UMLID=_1JKHYGazEeWM97N1KEdxjg}" source="//@children.3/@children.0" target="//@children.3/@children.1" targetEnd="//@children.3/@children.0/@sourceConnections.0/@children.1" label="//@children.3/@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.3/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="161,34" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,34"/>
+        <children xsi:type="editmodel:WireLabelEditModel" name="&lt;&lt;include>>" foregroundRGB="96,96,96" size="60,14" fontInfo="Arial-8-2" anchorKind="MiddlePart"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.3/@children.0/@sourceConnections.0" name="Choisir les paramètres de la partie" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="459,89" size="180,69" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_wMvQsGazEeWM97N1KEdxjg}" itemName="Choisir les paramètres de la partie" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.1" name="Quitter la partie en cours" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="118,170" size="156,72" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_7i2NUGazEeWM97N1KEdxjg}" itemName="Quitter la partie en cours" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.2 //@children.3/@children.5/@sourceConnections.0 //@children.3/@children.4/@sourceConnections.0" name="Jouer une carte" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="129,275" size="150,56" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_EDDT0Ga0EeWM97N1KEdxjg}" itemName="Jouer une carte" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.3/@children.9/@sourceConnections.0 //@children.3/@children.10/@sourceConnections.0 //@children.3/@children.11/@sourceConnections.0" name="Jouer une carte &quot;ingrédient&quot;" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="357,209" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_MDFsgGa0EeWM97N1KEdxjg}" itemName="Jouer une carte &quot;ingrédient&quot;" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_0Bn2kGa-EeWM97N1KEdxjg}" source="//@children.3/@children.4" target="//@children.3/@children.3" targetEnd="//@children.3/@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,48" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,5"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.3/@children.7/@sourceConnections.0 //@children.3/@children.6/@sourceConnections.0" name="Jouer une carte &quot;allié&quot;" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="360,317" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_Nn8KcGa0EeWM97N1KEdxjg}" itemName="Jouer une carte &quot;allié&quot;" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_Kh1JkGa-EeWM97N1KEdxjg}" source="//@children.3/@children.5" target="//@children.3/@children.3" targetEnd="//@children.3/@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,7" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,49"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" name="Jouer une carte &quot;chiens de garde&quot;" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="650,377" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_Q6mOAGa0EeWM97N1KEdxjg}" itemName="Jouer une carte &quot;chiens de garde&quot;" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_LwptIGa-EeWM97N1KEdxjg}" source="//@children.3/@children.6" target="//@children.3/@children.5" targetEnd="//@children.3/@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,9" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,41"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:IncludesEditModel" autoLocated="true" id="{UMLID=_PuajMGa-EeWM97N1KEdxjg}" source="//@children.3/@children.6" target="//@children.3/@children.8" targetEnd="//@children.3/@children.6/@sourceConnections.1/@children.1" label="//@children.3/@children.6/@sourceConnections.1/@children.2" sourceEnd="//@children.3/@children.6/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="149,0" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="1,50"/>
+        <children xsi:type="editmodel:WireLabelEditModel" name="&lt;&lt;include>>" foregroundRGB="96,96,96" size="60,14" fontInfo="Arial-8-2" anchorKind="MiddlePart"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" name="Jouer une carte &quot;taupes géantes&quot;" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="654,305" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_TsML4Ga0EeWM97N1KEdxjg}" itemName="Jouer une carte &quot;taupes géantes&quot;" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_LGVk0Ga-EeWM97N1KEdxjg}" source="//@children.3/@children.7" target="//@children.3/@children.5" targetEnd="//@children.3/@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.7/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,30" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,18"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:IncludesEditModel" autoLocated="true" id="{UMLID=_Qge5UGa-EeWM97N1KEdxjg}" source="//@children.3/@children.7" target="//@children.3/@children.8" targetEnd="//@children.3/@children.7/@sourceConnections.1/@children.1" label="//@children.3/@children.7/@sourceConnections.1/@children.2" sourceEnd="//@children.3/@children.7/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,25" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,24"/>
+        <children xsi:type="editmodel:WireLabelEditModel" name="&lt;&lt;include>>" foregroundRGB="96,96,96" size="60,14" fontInfo="Arial-8-2" anchorKind="MiddlePart"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.3/@children.6/@sourceConnections.1 //@children.3/@children.7/@sourceConnections.1 //@children.3/@children.11/@sourceConnections.1" name="Choix du joueur ciblé" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="859,306" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_NbyZQGa-EeWM97N1KEdxjg}" itemName="Choix du joueur ciblé" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+    <children xsi:type="editmodel:UseCaseEditModel" name="Fabriquer de l'engrais" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="683,111" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_a8ovIGa-EeWM97N1KEdxjg}" itemName="Fabriquer de l'engrais" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_lWHEYGa-EeWM97N1KEdxjg}" source="//@children.3/@children.9" target="//@children.3/@children.4" targetEnd="//@children.3/@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.9/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,48" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,2"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" name="Offrir un ingrédient au géant" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="681,179" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_eEwWoGa-EeWM97N1KEdxjg}" itemName="Offrir un ingrédient au géant" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_lyRb8Ga-EeWM97N1KEdxjg}" source="//@children.3/@children.10" target="//@children.3/@children.4" targetEnd="//@children.3/@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.10/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,39" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,9"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" name="Soudoyer les farfadets" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="682,245" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_htgmAGa-EeWM97N1KEdxjg}" itemName="Soudoyer les farfadets" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+      <sourceConnections xsi:type="editmodel:UseCaseGeneralizationEditModel" autoLocated="true" id="{UMLID=_mS6D0Ga-EeWM97N1KEdxjg}" source="//@children.3/@children.11" target="//@children.3/@children.4" targetEnd="//@children.3/@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@children.11/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="0,7" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="150,43"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:IncludesEditModel" autoLocated="true" id="{UMLID=_m_T20Ga-EeWM97N1KEdxjg}" source="//@children.3/@children.11" target="//@children.3/@children.8" targetEnd="//@children.3/@children.11/@sourceConnections.1/@children.1" label="//@children.3/@children.11/@sourceConnections.1/@children.2" sourceEnd="//@children.3/@children.11/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="148,50" attachSource="true"/>
+        <children xsi:type="editmodel:UseCaseEndEditModel" location="2,0"/>
+        <children xsi:type="editmodel:WireLabelEditModel" name="&lt;&lt;include>>" foregroundRGB="96,96,96" size="60,14" fontInfo="Arial-8-2" anchorKind="MiddlePart"/>
+      </sourceConnections>
+    </children>
+    <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.3" name="Prendre deux graines" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="129,369" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_rErJsGa-EeWM97N1KEdxjg}" itemName="Prendre deux graines" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  </children>
+  <diagramOptions xsi:type="options:UseCaseDiagramOptions" level="0" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1190,448" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+</editmodel:UseCaseDiagramEditModel>
