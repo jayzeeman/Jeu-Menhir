@@ -1,0 +1,226 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public abstract class Jeu {
+	protected Saison saison;
+	private ArrayList<Player> lstJoueurs;
+
+	protected static Jeu jeu;
+
+	/*
+	 * (non-javadoc)
+	 */
+	private Player player;
+
+	/**
+ */
+private Collection<Joueur> joueur = null;
+
+	public Saison getSaison() {
+		return saison;
+	}
+
+	public void demarrer(int typePartie, int nbJoueurs) {
+	}
+
+	public void arreter() {
+	}
+
+	/**
+	 * Getter of the property <tt>player</tt>
+	 * 
+	 * @return Returns the player.
+	 * 
+	 */
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	/**
+	 * Setter of the property <tt>player</tt>
+	 * 
+	 * @param player
+	 *            The player to set.
+	 * 
+	 */
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+	
+	
+	/**
+	 * Getter of the property <tt>joueur</tt>
+	 *
+	 * @return Returns the joueur.
+	 *
+	 */
+	
+	public Collection<Joueur> getJoueur()
+	{
+		return joueur;
+	}
+
+	
+	
+	
+	/**
+	 * Returns the element at the specified position in this list.
+	 *
+	 * @param index index of element to return.
+	 * @return the element at the specified position in this list.
+	 * @see	java.util.List#get(int)
+	 *
+	 */
+	public Joueur getJoueur(int i){
+		return (Joueur) joueur.get(i);
+	}
+	
+	/**
+	 * Returns an iterator over the elements in this list in proper sequence.
+	 *
+	 * @return an iterator over the elements in this list in proper sequence.
+	 * @see java.util.List#iterator()
+	 *
+	 */
+	public Iterator<Joueur> joueurIterator(){
+		return joueur.iterator();
+	}
+	
+	/**
+	 * Returns <tt>true</tt> if this list contains no elements.
+	 * 
+	 * @return <tt>true</tt> if this list contains no elements.
+	 * @see java.util.List#isEmpty()
+	 *
+	 */
+	public boolean isJoueurEmpty(){
+		return joueur.isEmpty();
+	}
+	
+	/**
+	 * Returns <tt>true</tt> if this list contains the specified element.
+	 *
+	 * @param element element whose presence in this list is to be tested.
+	 * @return <tt>true</tt> if this list contains the specified element.
+	 * @see java.util.List#contains(Object)
+	 * 
+	 */
+	public boolean containsJoueur(Joueur Joueur){
+		return joueur.contains(Joueur);
+	}
+	
+	/**
+	 * Returns <tt>true</tt> if this list contains all of the elements of the
+	 * specified collection.
+	 *
+	 * @param elements collection to be checked for containment in this list.
+	 * @return <tt>true</tt> if this list contains all of the elements of the
+	 * 	       specified collection.
+	 * @see java.util.List#containsAll(Collection)
+	 *
+	 */
+	public boolean containsAllJoueur(Collection<? extends Joueur> joueur){
+		return this.joueur.containsAll(joueur);
+	}
+	
+	/**
+	 * Returns the number of elements in this list.
+	 *
+	 * @return the number of elements in this list.
+	 * @see java.util.List#size()
+	 *
+	 */
+	public int joueurSize(){
+		return joueur.size();
+	}
+	
+	/**
+	 * Returns an array containing all of the elements in this list in proper
+	 * sequence.
+	 *
+	 * @return an array containing all of the elements in this list in proper
+	 *	       sequence.
+	 * @see java.util.List#toArray()
+	 * 
+	 */
+	public Joueur[] joueurToArray(){
+		return joueur.toArray(new Joueur[joueur.size()]);
+	}
+	 
+	
+	/**
+	 * Setter of the property <tt>joueur</tt>
+	 *
+	 * @param joueur the joueur to set.
+	 *
+	 */
+	public void setJoueur(Collection<Joueur> joueur){
+		this.joueur = joueur;
+	}
+	/**
+	 * Inserts the specified element at the specified position in this list
+	 * (optional operation)
+	 *
+	 * @param index index at which the specified element is to be inserted.
+	 * @param element element to be inserted.
+	 * @see java.util.List#add(int, Object)
+	 *
+	 */
+	public void addJoueur(int index, Joueur Joueur){
+		joueur.add(index, Joueur);
+	}
+	
+	/**
+	 * Appends the specified element to the end of this list (optional
+	 * operation).
+	 *
+	 * @param element element to be appended to this list.
+	 * @return <tt>true</tt> (as per the general contract of the
+	 *            <tt>Collection.add</tt> method).
+	 * @see java.util.List#add(Object)
+	 *
+	 */
+	public boolean addJoueur(Joueur Joueur){
+		return joueur.add(Joueur);
+	}
+	
+	/**
+	 * Removes the element at the specified position in this list (optional
+	 * operation).
+	 *
+	 * @param index the index of the element to removed.
+	 * @return the element previously at the specified position.
+	 * @see java.util.List#remove(int)
+	 * 
+	 */
+	public Object removeJoueur(int index){
+		return joueur.remove(index);
+	}
+	
+	/**
+	 * Removes the first occurrence in this list of the specified element 
+	 * (optional operation).
+	 *
+	 * @param element element to be removed from this list, if present.
+	 * @return <tt>true</tt> if this list contained the specified element.
+	 * @see java.util.List#remove(Object)
+	 *
+	 */
+	public boolean removeJoueur(Joueur Joueur){
+		return joueur.remove(Joueur);
+	}
+	
+	/**
+	 * Removes all of the elements from this list (optional operation).
+	 *
+	 * @see java.util.List#clear()
+	 *
+	 */
+	public void clearJoueur(){
+		joueur.clear();
+	}
+
+}

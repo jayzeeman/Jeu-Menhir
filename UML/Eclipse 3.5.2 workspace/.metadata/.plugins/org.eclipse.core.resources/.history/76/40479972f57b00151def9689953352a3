@@ -1,0 +1,53 @@
+/**
+ * 
+ */
+
+/**
+ * @author Jason
+ *
+ */
+public abstract class Jeu {
+
+	protected Saison saison;
+	private ArrayList<Player> lstJoueurs;
+
+	protected static Jeu jeu;
+
+	/*
+	 * (non-javadoc)
+	 */
+	private Player player;
+
+	public Saison getSaison() {
+		return saison;
+	}
+
+	public void demarrer(int typePartie, int nbJoueurs) {
+	}
+
+	public void arreter() {
+	}
+
+	/**
+	 * Getter of the property <tt>player</tt>
+	 * 
+	 * @return Returns the player.
+	 * 
+	 */
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	/**
+	 * Setter of the property <tt>player</tt>
+	 * 
+	 * @param player
+	 *            The player to set.
+	 * 
+	 */
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+}

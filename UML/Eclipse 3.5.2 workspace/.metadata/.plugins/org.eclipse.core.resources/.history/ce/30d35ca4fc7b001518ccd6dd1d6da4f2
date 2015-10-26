@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" id="{UMLID=_qDs8UHvwEeWDS7Xb6g8-Gw,JavaID=}" metadata="uml2-1.0" initialized="true" tag="10" key="3230303730363239204A65755F4D656E6869725F56322E30">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.2/@sourceConnections.0" name="Jeu" location="256,48" size="153,290" timstampe="223" stereotype="" id="{UMLID=_XxodsHvxEeWDS7Xb6g8-Gw,JavaID=/Jeu}" runTimeClassModel="saison,demarrer(II),setJoueur(LCollection;),joueur,arreter(),jeu,lstJoueurs,getSaison(),getJoueur(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,77">
+      <children xsi:type="editmodel:AttributeEditModel" name="saison" size="61,16" id="{UMLID=_yF7UEHv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lstJoueurs" size="79,16" id="{UMLID=_yF7UFHv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="joueur" size="65,21" id="{UMLID=_yF7UEnv1EeWDS7Xb6g8-Gw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="94,136">
+      <children xsi:type="editmodel:MethodEditModel" name="getSaison" size="88,16" id="{UMLID=_yF7UGXv1EeWDS7Xb6g8-Gw,JavaID=/Jeu#getSaison()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="demarrer" size="84,16" id="{UMLID=_yF7UHnv1EeWDS7Xb6g8-Gw,JavaID=/Jeu#demarrer(II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="arreter" size="73,16" id="{UMLID=_yF7UGnv1EeWDS7Xb6g8-Gw,JavaID=/Jeu#arreter()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getJoueur" size="94,21" id="{UMLID=_0ySMp3v1EeWDS7Xb6g8-Gw,JavaID=/Jeu#getJoueur(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setJoueur" size="97,21" id="{UMLID=_0yJC2Xv1EeWDS7Xb6g8-Gw,JavaID=/Jeu#setJoueur(LCollection;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" size="2,1" description="Composition" autoLocated="true" id="{UMLID=_0l6kkHv1EeWDS7Xb6g8-Gw}" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="jeu" location="153,145" id="{UMLID=_0l6kk3v1EeWDS7Xb6g8-Gw}" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.0/@children.0/@children.0" roleLabel="//@children.0/@sourceConnections.0/@children.0/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="416,200" size="6,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- jeu" location="416,172" size="21,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="joueur" location="0,151" id="{UMLID=_yF7UEnv1EeWDS7Xb6g8-Gw}" multiplicityLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.1" orderingLabel="//@children.0/@sourceConnections.0/@children.1/@children.2" aggregationKind="Composition" navigable="true" orderingKind="1" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="619,200" size="4,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- joueur" location="586,172" size="37,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="{order}" location="589,214" size="34,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="JeuComplet" location="98,182" size="116,133" timstampe="153" stereotype="" id="{UMLID=_Oe1AIHvyEeWDS7Xb6g8-Gw,JavaID=/JeuComplet}" runTimeClassModel="numManche,JeuComplet(),lancer()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="numManche" size="87,16" id="{UMLID=_UJgD8HvyEeWDS7Xb6g8-Gw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,36">
+      <children xsi:type="editmodel:MethodEditModel" name="JeuComplet" size="95,16" id="{UMLID=_W3AMAHvyEeWDS7Xb6g8-Gw,JavaID=/JeuComplet#JeuComplet()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lancer" size="70,16" id="{UMLID=_0K6K8HvyEeWDS7Xb6g8-Gw,JavaID=/JeuComplet#lancer()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" description="Generalization" autoLocated="true" id="{UMLID=_RTHssHvyEeWDS7Xb6g8-Gw}" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="116,66" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,200"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="JeuRapide" location="98,42" size="116,95" timstampe="164" stereotype="" id="{UMLID=_I2zLMHvzEeWDS7Xb6g8-Gw,JavaID=/JeuRapide}" runTimeClassModel="Lancer(),JeuRapide()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,36">
+      <children xsi:type="editmodel:MethodEditModel" name="JeuRapide" size="90,16" id="{UMLID=_RZqkIHvzEeWDS7Xb6g8-Gw,JavaID=/JeuRapide#JeuRapide()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Lancer" size="74,16" id="{UMLID=_czQ5oHvzEeWDS7Xb6g8-Gw,JavaID=/JeuRapide#Lancer()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" description="Generalization" autoLocated="true" id="{UMLID=_LfFcEHvzEeWDS7Xb6g8-Gw}" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="116,50" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,44"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="Joueur" location="630,42" size="151,463" timstampe="53" stereotype="" id="{UMLID=_HTqIAHv0EeWDS7Xb6g8-Gw,JavaID=/Joueur}" runTimeClassModel="jouer(),getCartes(),lstCartes,carte,jeu1,getJeu(),getCarte(),setMenhirs(I),getMenhirs(),nombreGraines,setNombreGraines(I),setCarte(),setJeu(LJeu;),getJeu1(),setTotalMenhirs(I),getTotalMenhirs(),nombreMenhirs,getGraines(),setJeu1(LJeu;),nombreTotalMenhirs,jeu">
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,131">
+      <children xsi:type="editmodel:AttributeEditModel" name="nombreMenhirs" size="103,16" id="{UMLID=_pFnKJHv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nombreGraines" size="103,16" id="{UMLID=_pFnKKnv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nombreTotalMenhirs" size="125,16" id="{UMLID=_pFnKKHv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lstCartes" size="72,16" id="{UMLID=_pFnKIHv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="carte" size="54,16" id="{UMLID=_pFnKInv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jeu1" size="49,16" id="{UMLID=_pFnKJnv1EeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jeu" size="49,21" id="{UMLID=_0l6kk3v1EeWDS7Xb6g8-Gw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,244">
+      <children xsi:type="editmodel:MethodEditModel" name="getMenhirs" size="93,16" id="{UMLID=_pFw7Lnv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getMenhirs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getGraines" size="93,16" id="{UMLID=_pFnKMXv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getGraines()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTotalMenhirs" size="115,16" id="{UMLID=_pFw7JXv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getTotalMenhirs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMenhirs" size="93,16" id="{UMLID=_pFw7IXv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#setMenhirs(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setNombreGraines" size="130,16" id="{UMLID=_pFnKNHv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#setNombreGraines(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTotalMenhirs" size="115,16" id="{UMLID=_pFnKLHv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#setTotalMenhirs(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCartes" size="87,16" id="{UMLID=_pFw7JHv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getCartes()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="jouer" size="64,16" id="{UMLID=_pFnKMHv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#jouer()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCarte" size="81,16" id="{UMLID=_pFnKL3v1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getCarte()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getJeu1" size="78,16" id="{UMLID=_pFw7K3v1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getJeu1()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setJeu1" size="78,16" id="{UMLID=_pFw7KHv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#setJeu1(LJeu;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getJeu" size="81,21" id="{UMLID=_pFw7MXv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#getJeu()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setJeu" size="78,21" id="{UMLID=_0xsWzXv1EeWDS7Xb6g8-Gw,JavaID=/Joueur#setJeu(LJeu;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1190,350" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Naturel" methodSorter="Naturel" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

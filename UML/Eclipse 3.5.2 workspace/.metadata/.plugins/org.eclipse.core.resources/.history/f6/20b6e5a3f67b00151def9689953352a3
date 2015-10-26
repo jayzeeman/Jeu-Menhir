@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" id="{UMLID=_qDs8UHvwEeWDS7Xb6g8-Gw,JavaID=}" metadata="uml2-1.0" initialized="true" tag="10" key="3230303730363239204A65755F4D656E6869725F56322E30">
+  <children xsi:type="editmodel:ClassEditModel" name="Jeu" location="242,214" size="127,209" timstampe="14" stereotype="" id="{UMLID=_XxodsHvxEeWDS7Xb6g8-Gw,JavaID=/Jeu}" runTimeClassModel="saison,setPlayer(),demarrer(II),getPlayer(),arreter(),jeu,lstJoueurs,getSaison(),player">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:AttributeEditModel" name="jeu" size="43,16" id="{UMLID=_6n1AgnvxEeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lstJoueurs" size="79,16" id="{UMLID=_6n1AhHvxEeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="player" size="59,16" id="{UMLID=_6n-KcHvxEeWDS7Xb6g8-Gw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="saison" size="61,16" id="{UMLID=_6n1AgHvxEeWDS7Xb6g8-Gw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:MethodEditModel" name="arreter" size="73,16" id="{UMLID=_6n-KfHvxEeWDS7Xb6g8-Gw,JavaID=/Jeu#arreter()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="demarrer" size="84,16" id="{UMLID=_6n-Kd3vxEeWDS7Xb6g8-Gw,JavaID=/Jeu#demarrer(II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPlayer" size="85,16" id="{UMLID=_6n-KdXvxEeWDS7Xb6g8-Gw,JavaID=/Jeu#getPlayer()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSaison" size="88,16" id="{UMLID=_6n-KdnvxEeWDS7Xb6g8-Gw,JavaID=/Jeu#getSaison()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPlayer" size="85,16" id="{UMLID=_6n-KcnvxEeWDS7Xb6g8-Gw,JavaID=/Jeu#setPlayer()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="238,210" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Naturel" methodSorter="Naturel" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

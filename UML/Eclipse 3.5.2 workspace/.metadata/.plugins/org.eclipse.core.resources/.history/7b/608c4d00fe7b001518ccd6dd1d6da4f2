@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Meta="http:///schemas/Meta/1" xmlns:Omondo_1="http:///_zrN_0SUoEdmNXYQzyImvfA.profile.uml2" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Meta/1 platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_kycnUIE4EduiecUdqhZMrw http:///_zrN_0SUoEdmNXYQzyImvfA.profile.uml2 platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_1iUoEdmNXYQzyImvfA http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_p1ycIHvwEeWDS7Xb6g8-Gw" name="Jeu_Menhir_V2.0">
+    <eAnnotations xmi:id="_thHkwnv4EeWNq_b9DgyxIg" source="General" references="_thHkwXv4EeWNq_b9DgyxIg"/>
+    <packageImport xmi:id="_p34G0HvwEeWDS7Xb6g8-Gw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_qDs8UHvwEeWDS7Xb6g8-Gw" name="">
+      <eAnnotations xmi:id="_XxodsXvxEeWDS7Xb6g8-Gw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd" references="_XxodsHvxEeWDS7Xb6g8-Gw _Oe1AIHvyEeWDS7Xb6g8-Gw _I2zLMHvzEeWDS7Xb6g8-Gw _HTqIAHv0EeWDS7Xb6g8-Gw _0l6kkHv1EeWDS7Xb6g8-Gw _XO58YHv3EeWNq_b9DgyxIg _h0CVwHv8EeWPstgK0Sj9bw _i15bYHv8EeWPstgK0Sj9bw _yze5cHv8EeWPstgK0Sj9bw _30fVMHv8EeWPstgK0Sj9bw"/>
+      <eAnnotations xmi:id="_amsFoHv5EeWNq_b9DgyxIg" source="Test/srcClassDiagram.ucd" references="_XO58YHv3EeWNq_b9DgyxIg _HTqIAHv0EeWDS7Xb6g8-Gw _XxodsHvxEeWDS7Xb6g8-Gw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XxodsHvxEeWDS7Xb6g8-Gw" name="Jeu" clientDependency="_timygHv4EeWNq_b9DgyxIg _tiwjgXv4EeWNq_b9DgyxIg _tiwjg3v4EeWNq_b9DgyxIg _ti5tcXv4EeWNq_b9DgyxIg _pLd2UHv8EeWPstgK0Sj9bw" isAbstract="true">
+        <eAnnotations xmi:id="_XxodsnvxEeWDS7Xb6g8-Gw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+        <ownedAttribute xmi:id="_yF7UEHv1EeWDS7Xb6g8-Gw" name="saison" visibility="protected" type="_XO58YHv3EeWNq_b9DgyxIg" association="_XPWoUHv3EeWNq_b9DgyxIg">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_yF7UEXv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_yF7UEnv1EeWDS7Xb6g8-Gw" name="joueur" visibility="private" type="_HTqIAHv0EeWDS7Xb6g8-Gw" isOrdered="true" aggregation="composite" association="_0l6kkHv1EeWDS7Xb6g8-Gw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0l6kkXv1EeWDS7Xb6g8-Gw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0l6kknv1EeWDS7Xb6g8-Gw"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_yF7UE3v1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_yF7UFHv1EeWDS7Xb6g8-Gw" name="lstJoueurs" visibility="private" type="_HTqIAHv0EeWDS7Xb6g8-Gw" association="_5Ijh8Hv4EeWNq_b9DgyxIg">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_yF7UFXv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0x_RsHv1EeWDS7Xb6g8-Gw" name="jeu" visibility="protected" isStatic="true" type="_XxodsHvxEeWDS7Xb6g8-Gw" association="_5Ijh8Xv4EeWNq_b9DgyxIg">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_0x_RsXv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_h0CVwHv8EeWPstgK0Sj9bw" name="Saison">
+          <eAnnotations xmi:id="_h0CVwXv8EeWPstgK0Sj9bw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+          <ownedAttribute xmi:id="_j5aG0Hv8EeWPstgK0Sj9bw" name="valeur" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_j5aG0Xv8EeWPstgK0Sj9bw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_j5aG0nv8EeWPstgK0Sj9bw" name="getValeur" visibility="public" concurrency="concurrent">
+            <ownedParameter xmi:id="_j5aG03v8EeWPstgK0Sj9bw" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j5aG1Hv8EeWPstgK0Sj9bw" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_j5j30Hv8EeWPstgK0Sj9bw" name="Saison" visibility="private" concurrency="concurrent">
+            <ownedParameter xmi:id="_j5j30Xv8EeWPstgK0Sj9bw" name="valeur">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j5j30nv8EeWPstgK0Sj9bw" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedLiteral xmi:id="_j5j303v8EeWPstgK0Sj9bw" name="Printemps">
+            <slot xmi:id="_j6AjwHv8EeWPstgK0Sj9bw">
+              <value xmi:type="uml:Expression" xmi:id="_j6JtsHv8EeWPstgK0Sj9bw" name="valeur" symbol="0"/>
+            </slot>
+          </ownedLiteral>
+          <ownedLiteral xmi:id="_j6JtsXv8EeWPstgK0Sj9bw" name="Ete">
+            <slot xmi:id="_j6Jtsnv8EeWPstgK0Sj9bw">
+              <value xmi:type="uml:Expression" xmi:id="_j6Jts3v8EeWPstgK0Sj9bw" name="valeur" symbol="1"/>
+            </slot>
+          </ownedLiteral>
+          <ownedLiteral xmi:id="_j6JttHv8EeWPstgK0Sj9bw" name="Automne">
+            <slot xmi:id="_j6JttXv8EeWPstgK0Sj9bw">
+              <value xmi:type="uml:Expression" xmi:id="_j6Jttnv8EeWPstgK0Sj9bw" name="valeur" symbol="2"/>
+            </slot>
+          </ownedLiteral>
+          <ownedLiteral xmi:id="_j6Jtt3v8EeWPstgK0Sj9bw" name="Hiver">
+            <slot xmi:id="_j6JtuHv8EeWPstgK0Sj9bw">
+              <value xmi:type="uml:Expression" xmi:id="_j6JtuXv8EeWPstgK0Sj9bw" name="valeur" symbol="3"/>
+            </slot>
+          </ownedLiteral>
+        </nestedClassifier>
+        <ownedOperation xmi:id="_yF7UGXv1EeWDS7Xb6g8-Gw" name="getSaison" visibility="public" concurrency="concurrent"/>
+        <ownedOperation xmi:id="_yF7UGnv1EeWDS7Xb6g8-Gw" name="arreter" visibility="public" concurrency="concurrent"/>
+        <ownedOperation xmi:id="_yF7UHnv1EeWDS7Xb6g8-Gw" name="demarrer" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_pQPBk3v8EeWPstgK0Sj9bw" name="typePartie">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pQPBlHv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pQPBlXv8EeWPstgK0Sj9bw" name="nbJoueurs">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pQPBlnv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_0yJC2Xv1EeWDS7Xb6g8-Gw" name="setJoueur" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_pQYLgHv8EeWPstgK0Sj9bw" name="joueur" type="_HTqIAHv0EeWDS7Xb6g8-Gw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pQYLgXv8EeWPstgK0Sj9bw" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_0ySMp3v1EeWDS7Xb6g8-Gw" name="getJoueur" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_pQPBl3v8EeWPstgK0Sj9bw" name="i">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pQPBmHv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pQPBmXv8EeWPstgK0Sj9bw" type="_HTqIAHv0EeWDS7Xb6g8-Gw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pQPBmnv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Oe1AIHvyEeWDS7Xb6g8-Gw" name="JeuComplet" clientDependency="_Vofl8Hv8EeWPstgK0Sj9bw">
+        <eAnnotations xmi:id="_Oe1AIXvyEeWDS7Xb6g8-Gw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+        <generalization xmi:id="_RTHssHvyEeWDS7Xb6g8-Gw" general="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+        <ownedAttribute xmi:id="_UJgD8HvyEeWDS7Xb6g8-Gw" name="numManche" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_UJgD8XvyEeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_W3AMAHvyEeWDS7Xb6g8-Gw" name="JeuComplet" visibility="private" concurrency="concurrent"/>
+        <ownedOperation xmi:id="_0K6K8HvyEeWDS7Xb6g8-Gw" name="lancer" visibility="public" isStatic="true" concurrency="concurrent">
+          <ownedParameter xmi:id="_VoV08Hv8EeWPstgK0Sj9bw" type="_XxodsHvxEeWDS7Xb6g8-Gw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VoV08Xv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_I2zLMHvzEeWDS7Xb6g8-Gw" name="JeuRapide" clientDependency="_VqRuonv8EeWPstgK0Sj9bw">
+        <eAnnotations xmi:id="_I2zLMXvzEeWDS7Xb6g8-Gw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+        <generalization xmi:id="_LfFcEHvzEeWDS7Xb6g8-Gw" general="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+        <ownedOperation xmi:id="_RZqkIHvzEeWDS7Xb6g8-Gw" name="JeuRapide" visibility="private" concurrency="concurrent"/>
+        <ownedOperation xmi:id="_czQ5oHvzEeWDS7Xb6g8-Gw" name="Lancer" visibility="public" isStatic="true" concurrency="concurrent">
+          <ownedParameter xmi:id="_V5BVQHv8EeWPstgK0Sj9bw" type="_XxodsHvxEeWDS7Xb6g8-Gw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V5BVQXv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HTqIAHv0EeWDS7Xb6g8-Gw" name="Joueur" clientDependency="_VrU3gHv8EeWPstgK0Sj9bw _VreBcXv8EeWPstgK0Sj9bw _y9E6WXv8EeWPstgK0Sj9bw _4DFx_Xv8EeWPstgK0Sj9bw _4DPi4Xv8EeWPstgK0Sj9bw" isAbstract="true">
+        <eAnnotations xmi:id="_HTqIAXv0EeWDS7Xb6g8-Gw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+        <ownedAttribute xmi:id="_pFnKIHv1EeWDS7Xb6g8-Gw" name="lstCartes" visibility="protected" type="_yze5cHv8EeWPstgK0Sj9bw" association="_y9OEQXv8EeWPstgK0Sj9bw">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pFnKIXv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_pFnKInv1EeWDS7Xb6g8-Gw" name="carte" visibility="private" type="_yze5cHv8EeWPstgK0Sj9bw" association="_y9OEQ3v8EeWPstgK0Sj9bw">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pFnKI3v1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_pFnKJHv1EeWDS7Xb6g8-Gw" name="nombreMenhirs" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pFnKJXv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_pFnKKHv1EeWDS7Xb6g8-Gw" name="nombreTotalMenhirs" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pFnKKXv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_pFnKKnv1EeWDS7Xb6g8-Gw" name="nombreGraines" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pFnKK3v1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0l6kk3v1EeWDS7Xb6g8-Gw" name="jeu" visibility="private" type="_XxodsHvxEeWDS7Xb6g8-Gw" association="_0l6kkHv1EeWDS7Xb6g8-Gw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0l6klHv1EeWDS7Xb6g8-Gw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0l6klXv1EeWDS7Xb6g8-Gw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_0l6klnv1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_30fVMXv8EeWPstgK0Sj9bw" name="cartes" visibility="private" type="_yze5cHv8EeWPstgK0Sj9bw" aggregation="shared" association="_30fVMHv8EeWPstgK0Sj9bw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_30fVMnv8EeWPstgK0Sj9bw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_30fVM3v8EeWPstgK0Sj9bw"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_307aEHv8EeWPstgK0Sj9bw" value="null"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_pFnKLHv1EeWDS7Xb6g8-Gw" name="setTotalMenhirs" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPcHv9EeWPstgK0Sj9bw" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPcXv9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFnKL3v1EeWDS7Xb6g8-Gw" name="getCarte" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPcnv9EeWPstgK0Sj9bw" type="_yze5cHv8EeWPstgK0Sj9bw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPc3v9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFnKMHv1EeWDS7Xb6g8-Gw" name="jouer" visibility="public" concurrency="concurrent"/>
+        <ownedOperation xmi:id="_pFnKMXv1EeWDS7Xb6g8-Gw" name="getGraines" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPZnv9EeWPstgK0Sj9bw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPZ3v9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFnKNHv1EeWDS7Xb6g8-Gw" name="setNombreGraines" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPZHv9EeWPstgK0Sj9bw" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPZXv9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFw7IXv1EeWDS7Xb6g8-Gw" name="setMenhirs" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPbnv9EeWPstgK0Sj9bw" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPb3v9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFw7JHv1EeWDS7Xb6g8-Gw" name="getCartes" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPaHv9EeWPstgK0Sj9bw" type="_yze5cHv8EeWPstgK0Sj9bw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPaXv9EeWPstgK0Sj9bw" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFw7JXv1EeWDS7Xb6g8-Gw" name="getTotalMenhirs" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPanv9EeWPstgK0Sj9bw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPa3v9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFw7Lnv1EeWDS7Xb6g8-Gw" name="getMenhirs" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPbHv9EeWPstgK0Sj9bw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPbXv9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pFw7MXv1EeWDS7Xb6g8-Gw" name="getJeu" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPYHv9EeWPstgK0Sj9bw" type="_XxodsHvxEeWDS7Xb6g8-Gw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPYXv9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_0xsWynv1EeWDS7Xb6g8-Gw" name="setCarte" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPYnv9EeWPstgK0Sj9bw" name="carte" type="_yze5cHv8EeWPstgK0Sj9bw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPY3v9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_0xsWzXv1EeWDS7Xb6g8-Gw" name="setJeu" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPdHv9EeWPstgK0Sj9bw" name="jeu" type="_XxodsHvxEeWDS7Xb6g8-Gw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPdXv9EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_nocvCHv9EeWPstgK0Sj9bw" name="setCartes" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_nyIPdnv9EeWPstgK0Sj9bw" name="cartes" type="_yze5cHv8EeWPstgK0Sj9bw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nyIPd3v9EeWPstgK0Sj9bw" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_0l6kkHv1EeWDS7Xb6g8-Gw" name="" memberEnd="_yF7UEnv1EeWDS7Xb6g8-Gw _0l6kk3v1EeWDS7Xb6g8-Gw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XO58YHv3EeWNq_b9DgyxIg" name="Saison">
+        <eAnnotations xmi:id="_XO58YXv3EeWNq_b9DgyxIg" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+        <eAnnotations xmi:id="_Zw_FUHv8EeWPstgK0Sj9bw" source="UML"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_XPWoUHv3EeWNq_b9DgyxIg" memberEnd="_yF7UEHv1EeWDS7Xb6g8-Gw _XPWoUXv3EeWNq_b9DgyxIg">
+        <ownedEnd xmi:id="_XPWoUXv3EeWNq_b9DgyxIg" name="ownedEnd" type="_XxodsHvxEeWDS7Xb6g8-Gw" association="_XPWoUHv3EeWNq_b9DgyxIg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5Ijh8Hv4EeWNq_b9DgyxIg" memberEnd="_yF7UFHv1EeWDS7Xb6g8-Gw _pFnKJnv1EeWDS7Xb6g8-Gw">
+        <ownedEnd xmi:id="_pFnKJnv1EeWDS7Xb6g8-Gw" name="jeu1" visibility="private" type="_XxodsHvxEeWDS7Xb6g8-Gw" association="_5Ijh8Hv4EeWNq_b9DgyxIg">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pFnKJ3v1EeWDS7Xb6g8-Gw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5Ijh8Xv4EeWNq_b9DgyxIg" memberEnd="_0x_RsHv1EeWDS7Xb6g8-Gw _5Ijh8nv4EeWNq_b9DgyxIg">
+        <ownedEnd xmi:id="_5Ijh8nv4EeWNq_b9DgyxIg" name="ownedEnd" type="_XxodsHvxEeWDS7Xb6g8-Gw" association="_5Ijh8Xv4EeWNq_b9DgyxIg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_i15bYHv8EeWPstgK0Sj9bw" name="Jeu$Saison$Saison">
+        <eAnnotations xmi:id="_i15bYXv8EeWPstgK0Sj9bw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yze5cHv8EeWPstgK0Sj9bw" name="Carte" clientDependency="_4Cy29Hv8EeWPstgK0Sj9bw">
+        <eAnnotations xmi:id="_yze5cXv8EeWPstgK0Sj9bw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+        <ownedAttribute xmi:id="_30fVNHv8EeWPstgK0Sj9bw" name="joueur" visibility="private" type="_HTqIAHv0EeWDS7Xb6g8-Gw" association="_30fVMHv8EeWPstgK0Sj9bw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_30fVNXv8EeWPstgK0Sj9bw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_30fVNnv8EeWPstgK0Sj9bw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_30yQIHv8EeWPstgK0Sj9bw" value="null"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_4CpF8Hv8EeWPstgK0Sj9bw" name="getJoueur" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_4CpF8Xv8EeWPstgK0Sj9bw" type="_HTqIAHv0EeWDS7Xb6g8-Gw" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4Cy28Hv8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4Cy28Xv8EeWPstgK0Sj9bw" name="setJoueur" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_4Cy28nv8EeWPstgK0Sj9bw" name="joueur" type="_HTqIAHv0EeWDS7Xb6g8-Gw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4Cy283v8EeWPstgK0Sj9bw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_y9OEQXv8EeWPstgK0Sj9bw" memberEnd="_pFnKIHv1EeWDS7Xb6g8-Gw _y9OEQnv8EeWPstgK0Sj9bw">
+        <ownedEnd xmi:id="_y9OEQnv8EeWPstgK0Sj9bw" name="ownedEnd" type="_HTqIAHv0EeWDS7Xb6g8-Gw" association="_y9OEQXv8EeWPstgK0Sj9bw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_y9OEQ3v8EeWPstgK0Sj9bw" memberEnd="_pFnKInv1EeWDS7Xb6g8-Gw _y9OERHv8EeWPstgK0Sj9bw">
+        <ownedEnd xmi:id="_y9OERHv8EeWPstgK0Sj9bw" name="ownedEnd" type="_HTqIAHv0EeWDS7Xb6g8-Gw" association="_y9OEQ3v8EeWPstgK0Sj9bw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_30fVMHv8EeWPstgK0Sj9bw" memberEnd="_30fVMXv8EeWPstgK0Sj9bw _30fVNHv8EeWPstgK0Sj9bw">
+        <name xsi:nil="true"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_thHkwHv4EeWNq_b9DgyxIg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_thHkwXv4EeWNq_b9DgyxIg" name="util">
+        <eAnnotations xmi:id="_thHkxHv4EeWNq_b9DgyxIg" source="Jeu_Menhir_V2.0/ClassDiagram.ucd" references="_thHkw3v4EeWNq_b9DgyxIg _thafsHv4EeWNq_b9DgyxIg _4DFx8Hv8EeWPstgK0Sj9bw"/>
+        <eAnnotations xmi:id="_amsFoXv5EeWNq_b9DgyxIg" source="Test/srcClassDiagram.ucd" references="_thHkw3v4EeWNq_b9DgyxIg _thafsHv4EeWNq_b9DgyxIg"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_thHkw3v4EeWNq_b9DgyxIg" name="ArrayList">
+          <eAnnotations xmi:id="_thHkxXv4EeWNq_b9DgyxIg" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_thHkxnv4EeWNq_b9DgyxIg" parameter="_thHkx3v4EeWNq_b9DgyxIg">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_thHkx3v4EeWNq_b9DgyxIg" parameteredElement="_thHkyHv4EeWNq_b9DgyxIg">
+              <ownedParameteredElement xmi:type="uml:DataType" xmi:id="_thHkyHv4EeWNq_b9DgyxIg" name="E" templateParameter="_thHkx3v4EeWNq_b9DgyxIg"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_thafsHv4EeWNq_b9DgyxIg" name="Collection" isAbstract="true">
+          <eAnnotations xmi:id="_thafsXv4EeWNq_b9DgyxIg" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_thafsnv4EeWNq_b9DgyxIg" parameter="_thafs3v4EeWNq_b9DgyxIg">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_thafs3v4EeWNq_b9DgyxIg" parameteredElement="_thaftHv4EeWNq_b9DgyxIg">
+              <ownedParameteredElement xmi:type="uml:DataType" xmi:id="_thaftHv4EeWNq_b9DgyxIg" name="E" templateParameter="_thafs3v4EeWNq_b9DgyxIg"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4DFx8Hv8EeWPstgK0Sj9bw" name="Iterator" isAbstract="true">
+          <eAnnotations xmi:id="_4DFx8Xv8EeWPstgK0Sj9bw" source="Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_4DFx8nv8EeWPstgK0Sj9bw" parameter="_4DFx83v8EeWPstgK0Sj9bw">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_4DFx83v8EeWPstgK0Sj9bw" parameteredElement="_4DFx9Hv8EeWPstgK0Sj9bw">
+              <ownedParameteredElement xmi:type="uml:DataType" xmi:id="_4DFx9Hv8EeWPstgK0Sj9bw" name="E" templateParameter="_4DFx83v8EeWPstgK0Sj9bw"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_timygHv4EeWNq_b9DgyxIg" supplier="_thHkw3v4EeWNq_b9DgyxIg" client="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_tiwjgXv4EeWNq_b9DgyxIg" supplier="_XO58YHv3EeWNq_b9DgyxIg" client="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_tiwjg3v4EeWNq_b9DgyxIg" supplier="_HTqIAHv0EeWDS7Xb6g8-Gw" client="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ti5tcXv4EeWNq_b9DgyxIg" supplier="_thafsHv4EeWNq_b9DgyxIg" client="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_Vofl8Hv8EeWPstgK0Sj9bw" supplier="_XxodsHvxEeWDS7Xb6g8-Gw" client="_Oe1AIHvyEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_VqRuonv8EeWPstgK0Sj9bw" supplier="_XxodsHvxEeWDS7Xb6g8-Gw" client="_I2zLMHvzEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VrU3gHv8EeWPstgK0Sj9bw" supplier="_thHkw3v4EeWNq_b9DgyxIg" client="_HTqIAHv0EeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VreBcXv8EeWPstgK0Sj9bw" supplier="_XxodsHvxEeWDS7Xb6g8-Gw" client="_HTqIAHv0EeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_pLd2UHv8EeWPstgK0Sj9bw" supplier="_h0CVwHv8EeWPstgK0Sj9bw" client="_XxodsHvxEeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_y9E6WXv8EeWPstgK0Sj9bw" supplier="_yze5cHv8EeWPstgK0Sj9bw" client="_HTqIAHv0EeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_4Cy29Hv8EeWPstgK0Sj9bw" supplier="_HTqIAHv0EeWDS7Xb6g8-Gw" client="_yze5cHv8EeWPstgK0Sj9bw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_4DFx_Xv8EeWPstgK0Sj9bw" supplier="_4DFx8Hv8EeWPstgK0Sj9bw" client="_HTqIAHv0EeWDS7Xb6g8-Gw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_4DPi4Xv8EeWPstgK0Sj9bw" supplier="_thafsHv4EeWNq_b9DgyxIg" client="_HTqIAHv0EeWDS7Xb6g8-Gw"/>
+    <profileApplication xmi:id="_p8zDEHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p8zDEXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Webservice_3.2_SN.profile.uml#_6jgWRSK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Webservice_3.2_SN.profile.uml#_RgVmWCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p8zDEnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p8zDE3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Service_3.2_SN.profile.uml#_6VpgcCK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Service_3.2_SN.profile.uml#_RgMRQCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p8zDFHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p8zDFXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Java.profile.uml#_aZhLlH6MEdmbwasWWc4yvw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Java.profile.uml#_aZhLkH6MEdmbwasWWc4yvw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p8zDFnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p8zDF3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Meta_3.2_SN.profile.uml#_7sFH4CK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Meta_3.2_SN.profile.uml#_RgVcYiK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NAHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NAXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NAnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NA3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Persistence_3.2_SN.profile.uml#_AevloCK6EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Persistence_3.2_SN.profile.uml#_RgVfdiK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NBHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NBXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Archetype.profile.uml#_f6v3QOROEduiB7qvAtFfTA"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Archetype.profile.uml#_j-cLoORNEduiB7qvAtFfTA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NBnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NB3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Deployment.profile.uml#_gPzkoXlkEdyC2_BXA89-Eg"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Deployment.profile.uml#_69q0IGkDEd2C2vBXA89-Eg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NCHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NCXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_1iUoEdmNXYQzyImvfA"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_0iUoEdmNXYQzyImvfA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NCnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NC3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Common_3.2_SN.profile.uml#_7hMtlSK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Common_3.2_SN.profile.uml#_RgfPHCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NDHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NDXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/UML2.profile.uml#_f9NXwJIyEd2ymsRPCrfQAQ"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/UML2.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NDnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88ND3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Xml_3.2_SN.profile.uml#_7JNEVSK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Xml_3.2_SN.profile.uml#_RgVfXCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NEHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NEXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Process_3.2_SN.profile.uml#_7D2DMCK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Process_3.2_SN.profile.uml#_RgfOnSK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NEnvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NE3vwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_kycnUIE4EduiecUdqhZMrw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_EJn30IE0EduiecUdqhZMrw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_p88NFHvwEeWDS7Xb6g8-Gw">
+      <eAnnotations xmi:id="_p88NFXvwEeWDS7Xb6g8-Gw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Presentation_3.2_SN.profile.uml#_4Um1wCK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Presentation_3.2_SN.profile.uml#_RgVcjiK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Omondo_1:Omondo__Import xmi:id="_tiwjgHv4EeWNq_b9DgyxIg" base_Usage="_timygHv4EeWNq_b9DgyxIg"/>
+  <Omondo_1:Omondo__Import xmi:id="_tiwjgnv4EeWNq_b9DgyxIg" base_Usage="_tiwjgXv4EeWNq_b9DgyxIg"/>
+  <Omondo_1:Omondo__Import xmi:id="_ti5tcHv4EeWNq_b9DgyxIg" base_Usage="_tiwjg3v4EeWNq_b9DgyxIg"/>
+  <Omondo_1:Omondo__Import xmi:id="_ti5tcnv4EeWNq_b9DgyxIg" base_Usage="_ti5tcXv4EeWNq_b9DgyxIg"/>
+  <Meta:derive xmi:id="_VopW8Hv8EeWPstgK0Sj9bw" base_Dependency="_Vofl8Hv8EeWPstgK0Sj9bw"/>
+  <Meta:derive xmi:id="_VqRuo3v8EeWPstgK0Sj9bw" base_Dependency="_VqRuonv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_VreBcHv8EeWPstgK0Sj9bw" base_Usage="_VrU3gHv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_VrnycHv8EeWPstgK0Sj9bw" base_Usage="_VreBcXv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_pLd2UXv8EeWPstgK0Sj9bw" base_Usage="_pLd2UHv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_y9OEQHv8EeWPstgK0Sj9bw" base_Usage="_y9E6WXv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_4Cy29Xv8EeWPstgK0Sj9bw" base_Usage="_4Cy29Hv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_4DPi4Hv8EeWPstgK0Sj9bw" base_Usage="_4DFx_Xv8EeWPstgK0Sj9bw"/>
+  <Standard:Call xmi:id="_4DYs0Hv8EeWPstgK0Sj9bw" base_Usage="_4DPi4Xv8EeWPstgK0Sj9bw"/>
+  <Omondo_1:Omondo__Import xmi:id="_4DYs0Xv8EeWPstgK0Sj9bw" base_Usage="_4DPi4Xv8EeWPstgK0Sj9bw"/>
+</xmi:XMI>

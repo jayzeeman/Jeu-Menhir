@@ -1,0 +1,206 @@
+	import java.util.ArrayList;
+	import java.util.Collection;
+	import java.util.Iterator;
+
+	public abstract class Joueur {
+		protected int nombreMenhirs;
+		protected int nombreGraines;
+		protected int nombreTotalMenhirs;
+		protected ArrayList<Carte> lstCartes;
+
+		private Carte carte;
+
+		private Jeu jeu1;
+
+		private Jeu jeu = null;
+
+		/**
+ *
+ */
+		private Collection<Carte> carte1 = null;
+
+		public int getMenhirs() {
+			return nombreMenhirs;
+		}
+
+		public int getGraines() {
+			return nombreGraines;
+		}
+
+		public int getTotalMenhirs() {
+			return nombreTotalMenhirs;
+		}
+
+		public void setMenhirs(int nombre) {
+			nombreMenhirs = nombre;
+		}
+
+		public void setNombreGraines(int nombre) {
+			this.nombreGraines = nombre;
+		}
+
+		public void setTotalMenhirs(int nombre) {
+			this.nombreTotalMenhirs = nombre;
+		}
+
+		public ArrayList<Carte> getCartes() {
+			return lstCartes;
+		}
+
+		public void jouer() {
+		}
+
+		public Carte getCarte() {
+			return carte;
+		}
+
+		public void setCarte(Carte carte) {
+			this.carte = carte;
+		}
+
+		public Jeu getJeu1() {
+			return jeu1;
+		}
+
+		public void setJeu1(Jeu jeu1) {
+			this.jeu1 = jeu1;
+		}
+
+		public Jeu getJeu() {
+			return jeu;
+		}
+
+		public void setJeu(Jeu jeu) {
+			this.jeu = jeu;
+		}
+
+		/**
+		 * Getter of the property <tt>carte1</tt>
+		 * 
+		 * @return Returns the carte1.
+		 * 
+		 */
+
+		public Collection<Carte> getCarte1() {
+			return carte1;
+		}
+
+		/**
+		 * Returns an iterator over the elements in this collection.
+		 * 
+		 * @return an <tt>Iterator</tt> over the elements in this collection
+		 * @see java.util.Collection#iterator()
+		 * 
+		 */
+		public Iterator<Carte> carte1Iterator() {
+			return carte1.iterator();
+		}
+
+		/**
+		 * Returns <tt>true</tt> if this collection contains no elements.
+		 * 
+		 * @return <tt>true</tt> if this collection contains no elements
+		 * @see java.util.Collection#isEmpty()
+		 * 
+		 */
+		public boolean isCarte1Empty() {
+			return carte1.isEmpty();
+		}
+
+		/**
+		 * Returns <tt>true</tt> if this collection contains the specified
+		 * element.
+		 * 
+		 * @param element
+		 *            whose presence in this collection is to be tested.
+		 * @see java.util.Collection#contains(Object)
+		 * 
+		 */
+		public boolean containsCarte1(Carte carte1) {
+			return this.carte1.contains(carte1);
+		}
+
+		/**
+		 * Returns <tt>true</tt> if this collection contains all of the elements
+		 * in the specified collection.
+		 * 
+		 * @param elements
+		 *            collection to be checked for containment in this
+		 *            collection.
+		 * @see java.util.Collection#containsAll(Collection)
+		 * 
+		 */
+		public boolean containsAllCarte1(Collection<Carte> carte1) {
+			return this.carte1.containsAll(carte1);
+		}
+
+		/**
+		 * Returns the number of elements in this collection.
+		 * 
+		 * @return the number of elements in this collection
+		 * @see java.util.Collection#size()
+		 * 
+		 */
+		public int carte1Size() {
+			return carte1.size();
+		}
+
+		/**
+		 * Returns all elements of this collection in an array.
+		 * 
+		 * @return an array containing all of the elements in this collection
+		 * @see java.util.Collection#toArray()
+		 * 
+		 */
+		public Carte[] carte1ToArray() {
+			return carte1.toArray(new Carte[carte1.size()]);
+		}
+
+		/**
+		 * Setter of the property <tt>carte1</tt>
+		 * 
+		 * @param carte1
+		 *            the carte1 to set.
+		 * 
+		 */
+		public void setCarte1(Collection<Carte> carte1) {
+			this.carte1 = carte1;
+		}
+
+		/**
+		 * Ensures that this collection contains the specified element (optional
+		 * operation).
+		 * 
+		 * @param element
+		 *            whose presence in this collection is to be ensured.
+		 * @see java.util.Collection#add(Object)
+		 * 
+		 */
+		public boolean addCarte1(Carte carte1) {
+			return this.carte1.add(carte1);
+		}
+
+		/**
+		 * Removes a single instance of the specified element from this
+		 * collection, if it is present (optional operation).
+		 * 
+		 * @param element
+		 *            to be removed from this collection, if present.
+		 * @see java.util.Collection#add(Object)
+		 * 
+		 */
+		public boolean removeCarte1(Carte carte1) {
+			return this.carte1.remove(carte1);
+		}
+
+		/**
+		 * Removes all of the elements from this collection (optional
+		 * operation).
+		 * 
+		 * @see java.util.Collection#clear()
+		 * 
+		 */
+		public void clearCarte1() {
+			this.carte1.clear();
+		}
+	}

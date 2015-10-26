@@ -1,0 +1,77 @@
+
+public abstract class Jeu {
+
+	protected Saison saison;
+	private ArrayList<Joueur> lstJoueurs;
+
+	protected static Jeu jeu;
+
+	/*
+	 * (non-javadoc)
+	 */
+	private Joueur joueur;
+
+	/*
+ * (non-javadoc)
+ */
+private Joueur joueur1;
+
+	public Saison getSaison() {
+		return saison;
+	}
+
+	public void demarrer(int typePartie, int nbJoueurs) {
+	}
+
+	public void arreter() {
+	}
+
+	/**
+	 * Getter of the property <tt>player</tt>
+	 * 
+	 * @return Returns the player.
+	 * 
+	 */
+
+	public Joueur getJoueur() {
+		return joueur;
+	}
+
+	/**
+	 * Setter of the property <tt>player</tt>
+	 * 
+	 * @param player
+	 *            The player to set.
+	 * 
+	 */
+	public void setJoueur(Joueur joueur) {
+		this.joueur = joueur;
+	}
+
+	
+	 
+	/**
+	 * Getter of the property <tt>joueur1</tt>
+	 *
+	 * @return Returns the joueur1.
+	 * 
+	 */
+	
+	public Joueur getJoueur1()
+	{
+		return joueur1;
+	}
+
+	
+	
+	/**
+	 * Setter of the property <tt>joueur1</tt>
+	 *
+	 * @param joueur1 The joueur1 to set.
+	 *
+	 */
+	public void setJoueur1(Joueur joueur1 ){
+		this.joueur1 = joueur1;
+	}
+
+}

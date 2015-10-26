@@ -1,0 +1,30 @@
+	public class Carte {
+
+		/*
+		 * (non-javadoc)
+		 */
+		private Joueur joueur = null;
+
+		/**
+		 * Getter of the property <tt>joueur</tt>
+		 * 
+		 * @return Returns the joueur.
+		 * 
+		 */
+
+		public Joueur getJoueur() {
+			return joueur;
+		}
+
+		/**
+		 * Setter of the property <tt>joueur</tt>
+		 * 
+		 * @param joueur
+		 *            The joueur to set.
+		 * 
+		 */
+		public void setJoueur(Joueur joueur) {
+			this.joueur = joueur;
+		}
+
+	}
