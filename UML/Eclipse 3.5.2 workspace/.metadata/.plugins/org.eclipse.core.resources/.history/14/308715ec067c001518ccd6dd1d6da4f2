@@ -138,7 +138,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="CarteIngredient" location="1166,186" size="139,101" timstampe="129" stereotype="" id="{UMLID=_mjbyMHv-EeWPstgK0Sj9bw,JavaID=/CarteIngredient}" runTimeClassModel="force,getForce(I)">
+  <children xsi:type="editmodel:ClassEditModel" name="CarteIngredient" location="1166,186" size="139,101" timstampe="128" stereotype="" id="{UMLID=_mjbyMHv-EeWPstgK0Sj9bw,JavaID=/CarteIngredient}" runTimeClassModel="force,getForce(I)">
     <children xsi:type="editmodel:CompartmentEditModel">
       <children xsi:type="editmodel:AttributeEditModel" name="force" size="55,16" id="{UMLID=_rI2eIHv-EeWPstgK0Sj9bw}"/>
     </children>
@@ -153,7 +153,7 @@
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7" autoName="false"/>
-  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1162,182" rulerUnit="cm" gridShow="true">
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1190,252" rulerUnit="cm" gridShow="true">
     <leftRuler/>
     <topRuler/>
   </boardSetting>

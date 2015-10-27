@@ -322,16 +322,16 @@
           </defaultValue>
         </ownedAttribute>
         <ownedOperation xmi:id="_uiodYHv-EeWPstgK0Sj9bw" name="getForce" visibility="public" concurrency="concurrent">
-          <ownedParameter xmi:id="_36SwUHv-EeWPstgK0Sj9bw" name="saison">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_36SwUXv-EeWPstgK0Sj9bw" value="1"/>
+          <ownedParameter xmi:id="_3T768Hv-EeWPstgK0Sj9bw" name="saison">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3T768Xv-EeWPstgK0Sj9bw" value="1"/>
           </ownedParameter>
-          <ownedParameter xmi:id="_36SwUnv-EeWPstgK0Sj9bw" name="action">
+          <ownedParameter xmi:id="_3T768nv-EeWPstgK0Sj9bw" name="action">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_36SwU3v-EeWPstgK0Sj9bw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3T7683v-EeWPstgK0Sj9bw" value="1"/>
           </ownedParameter>
-          <ownedParameter xmi:id="_36SwVHv-EeWPstgK0Sj9bw" direction="return">
+          <ownedParameter xmi:id="_3T769Hv-EeWPstgK0Sj9bw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_36SwVXv-EeWPstgK0Sj9bw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3T769Xv-EeWPstgK0Sj9bw" value="1"/>
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
