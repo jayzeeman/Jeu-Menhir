@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="35" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="130" y="130">
+<window height="768" maximized="true" width="1024" x="-29" y="-22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -19,6 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.omondo.uml.SequenceDiagramEditor" itemType="typeToolBarContribution" x="287" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.omondo.uml.ClassDiagramEditor" itemType="typeToolBarContribution" x="287" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -26,15 +27,16 @@
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1445870809006" focus="true" label="Workspace - Java">
 <editors>
-<editorArea activeWorkbook="DefaultEditorWorkbook">
+<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@8dff374">
 <info part="org.eclipse.ui.internal.EditorStack@8dff374">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="1"/>
 <part id="0"/>
 </presentation>
 </folder>
 </info>
-<info part="DefaultEditorWorkbook" ratio="0.5" ratioLeft="467" ratioRight="467" relationship="4" relative="org.eclipse.ui.internal.EditorStack@8dff374">
+<info part="DefaultEditorWorkbook" ratio="0.9688507" ratioLeft="902" ratioRight="29" relationship="4" relative="org.eclipse.ui.internal.EditorStack@8dff374">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
@@ -48,36 +50,39 @@
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="com.omondo.uml.SequenceDiagramEditor" name="SequenceDiagram.usd" partName="SequenceDiagram.usd" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/SequenceDiagram.usd" title="SequenceDiagram.usd" tooltip="Diagramme de Séquence UML Jeu_Menhir_V2.0/SequenceDiagram.usd" workbook="org.eclipse.ui.internal.EditorStack@8dff374">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/SequenceDiagram.usd"/>
+</editor>
+<editor id="com.omondo.uml.ClassDiagramEditor" name="ClassDiagram.ucd" partName="ClassDiagram.ucd" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/ClassDiagram.ucd" title="ClassDiagram.ucd" tooltip="Diagramme de Classes UML Jeu_Menhir_V2.0/ClassDiagram.ucd" workbook="org.eclipse.ui.internal.EditorStack@8dff374">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Jeu.java" partName="Jeu.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/Jeu.java" title="Jeu.java" tooltip="Jeu_Menhir_V2.0/src/Jeu.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/Jeu.java"/>
 <editorState selectionHorizontalPixel="176" selectionLength="3" selectionOffset="111" selectionTopPixel="34"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JeuComplet.java" partName="JeuComplet.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/JeuComplet.java" title="JeuComplet.java" tooltip="Jeu_Menhir_V2.0/src/JeuComplet.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/JeuComplet.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="54" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="104" selectionLength="10" selectionOffset="15" selectionTopPixel="17"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JeuRapide.java" partName="JeuRapide.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/JeuRapide.java" title="JeuRapide.java" tooltip="Jeu_Menhir_V2.0/src/JeuRapide.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/JeuRapide.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="14" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="136" selectionLength="9" selectionOffset="14" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Joueur.java" partName="Joueur.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/Joueur.java" title="Joueur.java" tooltip="Jeu_Menhir_V2.0/src/Joueur.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/Joueur.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="115" selectionTopPixel="68"/>
+<editorState selectionHorizontalPixel="208" selectionLength="6" selectionOffset="115" selectionTopPixel="34"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Carte.java" partName="Carte.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/Carte.java" title="Carte.java" tooltip="Jeu_Menhir_V2.0/src/Carte.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/Carte.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="52" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="136" selectionLength="5" selectionOffset="14" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CarteAllie.java" partName="CarteAllie.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/CarteAllie.java" title="CarteAllie.java" tooltip="Jeu_Menhir_V2.0/src/CarteAllie.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/CarteAllie.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="14" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="136" selectionLength="10" selectionOffset="14" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CarteIngredient.java" partName="CarteIngredient.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/CarteIngredient.java" title="CarteIngredient.java" tooltip="Jeu_Menhir_V2.0/src/CarteIngredient.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CarteIngredient.java" partName="CarteIngredient.java" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/src/CarteIngredient.java" title="CarteIngredient.java" tooltip="Jeu_Menhir_V2.0/src/CarteIngredient.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/src/CarteIngredient.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="178" selectionTopPixel="0"/>
-</editor>
-<editor focus="true" id="com.omondo.uml.ClassDiagramEditor" name="ClassDiagram.ucd" partName="ClassDiagram.ucd" path="D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse 3.5.2 workspace/Jeu_Menhir_V2.0/ClassDiagram.ucd" title="ClassDiagram.ucd" tooltip="Diagramme de Classes UML Jeu_Menhir_V2.0/ClassDiagram.ucd" workbook="org.eclipse.ui.internal.EditorStack@8dff374">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="14" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -87,7 +92,9 @@
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy">
+<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName="Aggregate for window 1445870809006"/>
+</view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1445870809006">
 <customFilters userDefinedPatternsEnabled="false">
@@ -141,7 +148,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="com.omondo.uml.SequenceDiagramEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -269,141 +276,133 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.omondo.uml.ClassDiagramEditor" path="/Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Jeu.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Joueur.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Carte.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/CarteAllie.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/CarteIngredient.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Joueur.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Jeu.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Carte.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/CarteAllie.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/CarteIngredient.java"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.omondo.uml.SequenceDiagramEditor" uri="file:/D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse%203.5.2%20workspace/Jeu_Menhir_V2.0/SequenceDiagram.usd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.omondo.uml.SequenceDiagramEditor" path="/Jeu_Menhir_V2.0/SequenceDiagram.usd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.omondo.uml.ClassDiagramEditor" path="/Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.omondo.uml.SequenceDiagramEditor" uri="file:/D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse%203.5.2%20workspace/Jeu_Menhir_V2.0/SequenceDiagram.usd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Jeu.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/JeuComplet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/JeuRapide.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Joueur.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/Carte.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/CarteAllie.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Jeu_Menhir_V2.0/src/CarteIngredient.java"/>
 </editors>
 <item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="313" y="0"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="1235" y="0"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="1235" y="0"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="1201" y="0"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Jeu.java" index="1">
-<position info="not_deleted" x="226" y="0"/>
-</item>
-<item historyLabel="Jeu.java" index="1">
-<position info="not_deleted" x="688" y="9"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="1201" y="0"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="836" y="9"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="806" y="0"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="849" y="0"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="849" y="0"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="980" y="8"/>
-</item>
-<item historyLabel="Joueur.java" index="2">
-<position info="not_deleted" x="115" y="6"/>
-</item>
-<item historyLabel="Carte.java" index="3">
-<position info="not_deleted" x="71" y="6"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Carte.java" index="3">
-<position info="not_deleted" x="52" y="0"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="CarteAllie.java" index="4">
-<position info="not_deleted" x="14" y="10"/>
-</item>
-<item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="CarteAllie.java" index="4">
+<item historyLabel="CarteAllie.java" index="1">
 <position info="not_deleted" x="159" y="0"/>
 </item>
-<item historyLabel="CarteAllie.java" index="4">
+<item historyLabel="CarteAllie.java" index="1">
 <position info="not_deleted" x="60" y="0"/>
 </item>
-<item historyLabel="CarteAllie.java" index="4">
+<item historyLabel="CarteAllie.java" index="1">
 <position info="not_deleted" x="155" y="0"/>
 </item>
 <item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="CarteAllie.java" index="4">
+<item historyLabel="CarteAllie.java" index="1">
 <position info="not_deleted" x="155" y="0"/>
 </item>
-<item historyLabel="CarteAllie.java" index="4">
+<item historyLabel="CarteAllie.java" index="1">
 <position info="not_deleted" x="14" y="10"/>
 </item>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="14" y="15"/>
 </item>
 <item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="182" y="0"/>
 </item>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="65" y="0"/>
 </item>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="67" y="0"/>
 </item>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="162" y="0"/>
 </item>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="163" y="0"/>
 </item>
-<item historyLabel="CarteIngredient.java" index="5">
+<item historyLabel="CarteIngredient.java" index="2">
 <position info="not_deleted" x="178" y="0"/>
 </item>
 <item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Joueur.java" index="6">
+<item historyLabel="Joueur.java" index="3">
 <position info="not_deleted" x="115" y="6"/>
 </item>
 <item historyLabel="UML Class Diagram Editor" index="0"/>
-<item historyLabel="Joueur.java" index="6">
+<item historyLabel="Joueur.java" index="3">
 <position info="not_deleted" x="115" y="6"/>
 </item>
 <item historyLabel="ClassDiagram.ucd" index="0"/>
-<item historyLabel="Jeu.java" index="7">
+<item historyLabel="Jeu.java" index="4">
 <position info="not_deleted" x="688" y="9"/>
 </item>
-<item historyLabel="Jeu.java" index="7">
+<item historyLabel="Jeu.java" index="4">
 <position info="not_deleted" x="111" y="3"/>
 </item>
-<item historyLabel="Carte.java" index="8">
+<item historyLabel="Carte.java" index="5">
 <position info="not_deleted" x="52" y="0"/>
 </item>
-<item historyLabel="CarteAllie.java" index="9">
+<item historyLabel="CarteAllie.java" index="6">
 <position info="not_deleted" x="14" y="10"/>
 </item>
-<item active="true" historyLabel="CarteIngredient.java" index="10">
+<item historyLabel="CarteIngredient.java" index="7">
 <position info="not_deleted" x="178" y="0"/>
 </item>
+<item historyLabel="UML Sequence Diagram Editor" index="8"/>
+<item historyLabel="SequenceDiagram.usd" index="9"/>
+<item historyLabel="UML Class Diagram Editor" index="10"/>
+<item historyLabel="UML Sequence Diagram Editor" index="11"/>
+<item historyLabel="SequenceDiagram.usd" index="9"/>
+<item historyLabel="UML Class Diagram Editor" index="10"/>
+<item historyLabel="SequenceDiagram.usd" index="9"/>
+<item historyLabel="ClassDiagram.ucd" index="10"/>
+<item historyLabel="Jeu.java" index="12">
+<position info="not_deleted" x="111" y="3"/>
+</item>
+<item historyLabel="SequenceDiagram.usd" index="9"/>
+<item historyLabel="ClassDiagram.ucd" index="10"/>
+<item historyLabel="JeuComplet.java" index="13">
+<position info="not_deleted" x="54" y="9"/>
+</item>
+<item historyLabel="JeuComplet.java" index="13">
+<position info="not_deleted" x="15" y="10"/>
+</item>
+<item historyLabel="JeuRapide.java" index="14">
+<position info="not_deleted" x="14" y="9"/>
+</item>
+<item historyLabel="SequenceDiagram.usd" index="9"/>
+<item historyLabel="ClassDiagram.ucd" index="10"/>
+<item historyLabel="Joueur.java" index="15">
+<position info="not_deleted" x="115" y="6"/>
+</item>
+<item historyLabel="Carte.java" index="16">
+<position info="not_deleted" x="52" y="0"/>
+</item>
+<item historyLabel="Carte.java" index="16">
+<position info="not_deleted" x="14" y="5"/>
+</item>
+<item historyLabel="CarteAllie.java" index="17">
+<position info="not_deleted" x="14" y="10"/>
+</item>
+<item historyLabel="CarteIngredient.java" index="18">
+<position info="not_deleted" x="178" y="0"/>
+</item>
+<item historyLabel="CarteIngredient.java" index="18">
+<position info="not_deleted" x="14" y="15"/>
+</item>
+<item historyLabel="SequenceDiagram.usd" index="9"/>
+<item historyLabel="ClassDiagram.ucd" index="10"/>
+<item active="true" historyLabel="SequenceDiagram.usd" index="9"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -424,6 +423,12 @@
 <mruList>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.omondo.uml.ClassDiagramEditor" name="ClassDiagram.ucd" tooltip="Jeu_Menhir_V2.0/ClassDiagram.ucd">
 <persistable path="/Jeu_Menhir_V2.0/ClassDiagram.ucd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.omondo.uml.SequenceDiagramEditor" name="SequenceDiagram.usd" tooltip="Jeu_Menhir_V2.0/SequenceDiagram.usd">
+<persistable path="/Jeu_Menhir_V2.0/SequenceDiagram.usd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.omondo.uml.SequenceDiagramEditor" name="SequenceDiagram.usd" tooltip="D:\Etudes\GIT\Jeu-Menhir\UML\Eclipse 3.5.2 workspace\Jeu_Menhir_V2.0\SequenceDiagram.usd">
+<persistable uri="file:/D:/Etudes/GIT/Jeu-Menhir/UML/Eclipse%203.5.2%20workspace/Jeu_Menhir_V2.0/SequenceDiagram.usd"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CarteIngredient.java" tooltip="Jeu_Menhir_V2.0/src/CarteIngredient.java">
 <persistable path="/Jeu_Menhir_V2.0/src/CarteIngredient.java"/>
