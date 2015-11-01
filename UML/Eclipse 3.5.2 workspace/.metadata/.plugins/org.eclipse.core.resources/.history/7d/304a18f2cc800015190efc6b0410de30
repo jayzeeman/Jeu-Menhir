@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" id="{UMLID=_qDs8UHvwEeWDS7Xb6g8-Gw,JavaID=}" metadata="uml2-1.0" initialized="true" tag="10" key="3230303730363239204A65755F4D656E6869725F56322E30">
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.2/@sourceConnections.0" name="Jeu" location="236,28" size="153,443" timstampe="443" stereotype="" id="{UMLID=_XxodsHvxEeWDS7Xb6g8-Gw,JavaID=/Jeu}" runTimeClassModel="saison,demarrer(II),setJoueur(LCollection;),joueur,Jeu.Saison,arreter(),jeu,lstJoueurs,getSaison(),getJoueur(I)">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.2/@sourceConnections.0" name="Jeu" location="236,28" size="153,443" timstampe="441" stereotype="" id="{UMLID=_XxodsHvxEeWDS7Xb6g8-Gw,JavaID=/Jeu}" runTimeClassModel="saison,demarrer(II),setJoueur(LCollection;),joueur,Jeu.Saison,arreter(),jeu,lstJoueurs,getSaison(),getJoueur(I)">
     <children xsi:type="editmodel:CompartmentEditModel" size="85,77">
       <children xsi:type="editmodel:AttributeEditModel" name="saison" size="67,21" id="{UMLID=_yF7UEHv1EeWDS7Xb6g8-Gw}"/>
       <children xsi:type="editmodel:AttributeEditModel" name="lstJoueurs" size="85,21" id="{UMLID=_yF7UFHv1EeWDS7Xb6g8-Gw}"/>
@@ -14,7 +14,7 @@
       <children xsi:type="editmodel:MethodEditModel" name="setJoueur" size="97,21" id="{UMLID=_0yJC2Xv1EeWDS7Xb6g8-Gw,JavaID=/Jeu#setJoueur(LCollection;)}"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="107,199">
-      <children xsi:type="editmodel:EnumerationEditModel" name="Saison" location="124,244" size="107,197" timstampe="443" stereotype="" id="{UMLID=_h0CVwHv8EeWPstgK0Sj9bw,JavaID=/Jeu$Saison}" runTimeClassModel="valeur,Printemps%,Automne%,Hiver%,getValeur(),Saison(I),Ete%">
+      <children xsi:type="editmodel:EnumerationEditModel" name="Saison" location="124,244" size="107,197" timstampe="441" stereotype="" id="{UMLID=_h0CVwHv8EeWPstgK0Sj9bw,JavaID=/Jeu$Saison}" runTimeClassModel="valeur,Printemps%,Automne%,Hiver%,getValeur(),Saison(I),Ete%">
         <children xsi:type="editmodel:CompartmentEditModel" size="76,72">
           <children xsi:type="editmodel:EnumerationLiteralEditModel" name="Ete" size="44,16" id="{UMLID=_j6JtsXv8EeWPstgK0Sj9bw}"/>
           <children xsi:type="editmodel:EnumerationLiteralEditModel" name="Printemps" size="76,16" id="{UMLID=_j5j303v8EeWPstgK0Sj9bw}"/>
@@ -45,7 +45,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="JeuComplet" location="70,183" size="116,133" timstampe="166" stereotype="" id="{UMLID=_Oe1AIHvyEeWDS7Xb6g8-Gw,JavaID=/JeuComplet}" runTimeClassModel="numManche,JeuComplet(),lancer()">
+  <children xsi:type="editmodel:ClassEditModel" name="JeuComplet" location="70,183" size="116,133" timstampe="164" stereotype="" id="{UMLID=_Oe1AIHvyEeWDS7Xb6g8-Gw,JavaID=/JeuComplet}" runTimeClassModel="numManche,JeuComplet(),lancer()">
     <children xsi:type="editmodel:CompartmentEditModel" size="87,18">
       <children xsi:type="editmodel:AttributeEditModel" name="numManche" size="87,16" id="{UMLID=_UJgD8HvyEeWDS7Xb6g8-Gw}"/>
     </children>
@@ -60,7 +60,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="JeuRapide" location="70,42" size="116,95" timstampe="178" stereotype="" id="{UMLID=_I2zLMHvzEeWDS7Xb6g8-Gw,JavaID=/JeuRapide}" runTimeClassModel="Lancer(),JeuRapide()">
+  <children xsi:type="editmodel:ClassEditModel" name="JeuRapide" location="70,42" size="116,95" timstampe="176" stereotype="" id="{UMLID=_I2zLMHvzEeWDS7Xb6g8-Gw,JavaID=/JeuRapide}" runTimeClassModel="Lancer(),JeuRapide()">
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="90,36">
       <children xsi:type="editmodel:MethodEditModel" name="JeuRapide" size="90,16" id="{UMLID=_RZqkIHvzEeWDS7Xb6g8-Gw,JavaID=/JeuRapide#JeuRapide()}"/>
@@ -73,7 +73,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="Joueur" location="504,28" size="152,459" timstampe="144" stereotype="" id="{UMLID=_HTqIAHv0EeWDS7Xb6g8-Gw,JavaID=/Joueur}" runTimeClassModel="jouer(),getCartes(),lstCartes,carte,getJeu(),getCarte(),setMenhirs(I),getMenhirs(),nombreGraines,setCartes(LCollection;),setNombreGraines(I),setJeu(LJeu;),setCarte(LCarte;),cartes,setTotalMenhirs(I),getTotalMenhirs(),nombreMenhirs,getGraines(),nombreTotalMenhirs,jeu">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="Joueur" location="504,28" size="152,459" timstampe="143" stereotype="" id="{UMLID=_HTqIAHv0EeWDS7Xb6g8-Gw,JavaID=/Joueur}" runTimeClassModel="jouer(),getCartes(),lstCartes,carte,getJeu(),getCarte(),setMenhirs(I),getMenhirs(),nombreGraines,setCartes(LCollection;),setNombreGraines(I),setJeu(LJeu;),setCarte(LCarte;),cartes,setTotalMenhirs(I),getTotalMenhirs(),nombreMenhirs,getGraines(),nombreTotalMenhirs,jeu">
     <children xsi:type="editmodel:CompartmentEditModel" size="125,169">
       <children xsi:type="editmodel:AttributeEditModel" name="nombreMenhirs" size="103,16" id="{UMLID=_pFnKJHv1EeWDS7Xb6g8-Gw}"/>
       <children xsi:type="editmodel:AttributeEditModel" name="nombreGraines" size="103,16" id="{UMLID=_pFnKKnv1EeWDS7Xb6g8-Gw}"/>
@@ -112,7 +112,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.6/@sourceConnections.0" name="Carte" location="784,84" size="141,189" timstampe="68" stereotype="" id="{UMLID=_yze5cHv8EeWPstgK0Sj9bw,JavaID=/Carte}" runTimeClassModel="joueur,nom,getJoueur(),setJoueur(LJoueur;)">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.6/@sourceConnections.0" name="Carte" location="784,84" size="141,189" timstampe="66" stereotype="" id="{UMLID=_yze5cHv8EeWPstgK0Sj9bw,JavaID=/Carte}" runTimeClassModel="joueur,nom,getJoueur(),setJoueur(LJoueur;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="65,41">
       <children xsi:type="editmodel:AttributeEditModel" name="nom" size="55,16" id="{UMLID=_9T0PMHv9EeWPstgK0Sj9bw}"/>
       <children xsi:type="editmodel:AttributeEditModel" name="joueur" size="65,21" id="{UMLID=_30fVNHv8EeWPstgK0Sj9bw}"/>
@@ -124,7 +124,7 @@
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="CarteAllie" location="1022,89" size="127,95" timstampe="120" stereotype="" id="{UMLID=_FnMaoHv-EeWPstgK0Sj9bw,JavaID=/CarteAllie}" runTimeClassModel="getForce(),force">
+  <children xsi:type="editmodel:ClassEditModel" name="CarteAllie" location="1022,89" size="127,95" timstampe="118" stereotype="" id="{UMLID=_FnMaoHv-EeWPstgK0Sj9bw,JavaID=/CarteAllie}" runTimeClassModel="getForce(),force">
     <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
       <children xsi:type="editmodel:AttributeEditModel" name="force" size="55,16" id="{UMLID=_WNjI4Hv-EeWPstgK0Sj9bw}"/>
     </children>
@@ -138,7 +138,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="CarteIngredient" location="1022,196" size="139,101" timstampe="136" stereotype="" id="{UMLID=_mjbyMHv-EeWPstgK0Sj9bw,JavaID=/CarteIngredient}" runTimeClassModel="force,getForce(I)">
+  <children xsi:type="editmodel:ClassEditModel" name="CarteIngredient" location="1022,196" size="139,101" timstampe="134" stereotype="" id="{UMLID=_mjbyMHv-EeWPstgK0Sj9bw,JavaID=/CarteIngredient}" runTimeClassModel="force,getForce(I)">
     <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
       <children xsi:type="editmodel:AttributeEditModel" name="force" size="55,16" id="{UMLID=_rI2eIHv-EeWPstgK0Sj9bw}"/>
     </children>
