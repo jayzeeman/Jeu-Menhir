@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="35" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="-29" y="-22">
+<window height="768" maximized="true" minimized="true" width="1024" x="2536" y="-19">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="175" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.omondo.uml.UMLElementCreationActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="com.omondo.uml.docgen.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
