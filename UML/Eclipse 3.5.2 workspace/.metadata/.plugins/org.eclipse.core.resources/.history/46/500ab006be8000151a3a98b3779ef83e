@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="SequenceDiagram" metadata="uml2-1.0" initialized="true" scrolledX="-5" scrolledY="20" tag="10" key="3230303730363239204A65755F4D656E6869725F56322E30">
+<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="SequenceDiagram" metadata="uml2-1.0" initialized="true" scrolledX="-5" scrolledY="-10" tag="10" key="3230303730363239204A65755F4D656E6869725F56322E30">
   <children xsi:type="editmodel:FrameEditModel" name="Interaction1" size="1051,687" type="Interaction">
     <children xsi:type="editmodel:FrameEditModel" location="54,90" size="764,351" type="loop">
       <children xsi:type="editmodel:FrameCompartmentEditModel" name="i &lt;= nombre de joueurs" location="0,20" size="764,351" condition="i &lt;= nombre de joueurs">
@@ -14,11 +14,11 @@
       </children>
     </children>
     <children xsi:type="editmodel:InstanceEditModel" name="Strategie" foregroundRGB="216,196,225" location="513,25" size="128,562" description="Sélectionner un élement existant" itemName="Strategie" InstanceType="Interface">
-      <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.2/@children.3/@sourceConnections.0" location="56,359" size="16,40" description="_I0QKMH_oEeWNLfTldTXWZQ" sequenceItemContainer="//@children.0/@children.1"/>
+      <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.2/@children.3/@sourceConnections.0" location="56,356" size="16,40" description="_I0QKMH_oEeWNLfTldTXWZQ" sequenceItemContainer="//@children.0/@children.1"/>
     </children>
     <children xsi:type="editmodel:InstanceEditModel" name="Joueur" foregroundRGB="196,220,196" location="341,25" size="100,562" description="Sélectionner un élement existant" itemName="Joueur" InstanceType="Class">
       <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.3/@children.0/@sourceConnections.0" location="42,115" size="16,40" description="_elNVEH_oEeWNLfTldTXWZQ" sequenceItemContainer="//@children.0/@children.2"/>
-      <children xsi:type="editmodel:ActivationEditModel" location="42,226" size="16,112" sequenceItemContainer="//@children.0/@children.2" recursiveChildren="//@children.0/@children.2/@children.2" length="112">
+      <children xsi:type="editmodel:ActivationEditModel" location="42,226" size="16,71" sequenceItemContainer="//@children.0/@children.2" recursiveChildren="//@children.0/@children.2/@children.2" length="71">
         <sourceConnections xsi:type="editmodel:SelfSequenceMessageEditModel" source="//@children.0/@children.2/@children.1" target="//@children.0/@children.2/@children.2" targetEnd="//@children.0/@children.2/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.2/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="jouer()" associatedSequenceNumber="2" frame="//@children.0/@children.0/@children.0/@children.0/@children.0">
           <children xsi:type="editmodel:SequenceEndEditModel" location="0,21" attachSource="true" userLabel="//@children.0/@children.2/@children.1/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.2/@children.1/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.2/@children.1/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.2/@children.1/@sourceConnections.0/@children.0/@children.3">
             <children xsi:type="editmodel:MessageLabelEditModel" size="0,14" fontInfo="Arial-8-0"/>
@@ -36,8 +36,8 @@
           <bendpoints secondRelativeDimension="50,0" firstRelativeDimension="58,9"/>
         </sourceConnections>
       </children>
-      <children xsi:type="editmodel:RecursiveActivationEditModel" targetConnections="//@children.0/@children.2/@children.1/@sourceConnections.0" location="50,257" size="16,81" description="__1qpIH_oEeWNLfTldTXWZQ" sequenceItemContainer="//@children.0/@children.2" length="81" associatedActivation="//@children.0/@children.2/@children.1" relativeLocation="8,10"/>
-      <children xsi:type="editmodel:ActivationEditModel" location="42,359" size="16,40" sequenceItemContainer="//@children.0/@children.2">
+      <children xsi:type="editmodel:RecursiveActivationEditModel" targetConnections="//@children.0/@children.2/@children.1/@sourceConnections.0" location="50,257" size="16,40" description="__1qpIH_oEeWNLfTldTXWZQ" sequenceItemContainer="//@children.0/@children.2" associatedActivation="//@children.0/@children.2/@children.1" relativeLocation="8,10"/>
+      <children xsi:type="editmodel:ActivationEditModel" location="42,356" size="16,40" sequenceItemContainer="//@children.0/@children.2">
         <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" source="//@children.0/@children.2/@children.3" target="//@children.0/@children.1/@children.0" targetEnd="//@children.0/@children.2/@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.2/@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="jouer()" associatedSequenceNumber="3" frame="//@children.0/@children.0/@children.0/@children.0/@children.1">
           <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.0/@children.2/@children.3/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.2/@children.3/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.2/@children.3/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.2/@children.3/@sourceConnections.0/@children.0/@children.3">
             <children xsi:type="editmodel:MessageLabelEditModel" size="0,14" fontInfo="Arial-8-0"/>
@@ -74,7 +74,7 @@
     </children>
   </children>
   <diagramOptions xsi:type="options:SequenceDiagramOptions" level="0" autoName="false"/>
-  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1764,1764" rulerUnit="cm" gridShow="true">
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,0" rulerUnit="cm" gridShow="true">
     <leftRuler/>
     <topRuler/>
   </boardSetting>
