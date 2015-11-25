@@ -16,4 +16,8 @@ public class JoueurVirtuel extends Joueur {
 			strategie = new StrategieNeutre(this);
 		}
 	}
+	
+	public CarteIngredient jouerIngredient() {
+		return strategie.jouerIngredient();
+	}
 }

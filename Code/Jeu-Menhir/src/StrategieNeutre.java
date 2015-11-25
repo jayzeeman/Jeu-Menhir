@@ -6,11 +6,11 @@ public class StrategieNeutre implements Strategie {
 		this.joueurVirtuel = joueurVirtuel;
 	}	
 	
-	public void jouerIngredient() {
-		
+	public CarteIngredient jouerIngredient() {
+		return null;
 	}
 	
-	public void jouerAllie() {
-		
+	public CarteAllie jouerAllie() {
+		return null;
 	}
 }

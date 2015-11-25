@@ -1,9 +1,21 @@
 import java.util.LinkedList;
 
 public abstract class Joueur {
-	private LinkedList<Carte> cartes;
+	protected LinkedList<CarteIngredient> cartesIngredient;
+	protected CarteAllie carteAllie;
 	
 	protected Joueur() {
-		cartes = new LinkedList<Carte>();
+		cartesIngredient = new LinkedList<CarteIngredient>();
+		carteAllie = null;
 	}
+	
+	public LinkedList<CarteIngredient> getCartesIngredient() {
+		return cartesIngredient;
+	}
+	
+	public CarteAllie getCarteAllie() {
+		return carteAllie;
+	}
+
+	public abstract CarteIngredient jouerIngredient();
 }
