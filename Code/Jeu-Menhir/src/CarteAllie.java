@@ -1,5 +1,5 @@
 
-public class CarteAllie {
+public class CarteAllie extends Carte {
 
 
 
