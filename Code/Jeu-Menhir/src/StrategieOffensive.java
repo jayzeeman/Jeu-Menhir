@@ -7,25 +7,30 @@ public class StrategieOffensive implements Strategie {
 		this.joueurVirtuel = joueurVirtuel;
 	}
 	
-	public CarteIngredient jouerIngredient() {
-		
+	public CarteIngredient choisirIngredient(byte saison) {
+		return getBestCarteFor(saison);
 	}
 	
-	public CarteAllie jouerAllie() {
-		if(joueurVirtuel.getCarteAllie().getNom() == "Taupe gÃ©ante") {
+	public CarteAllie choisirAllie(byte saison) {
+		CarteAllie carte = joueurVirtuel.getCarteAllie();
+		if(carte.getNom() == "TAUPE GÉANTE" && saison == carte.bestSaison()) {
 			return joueurVirtuel.getCarteAllie();
 		}
 		return null;
 	}
 	
-	private CarteIngredient getBestCarteFor(int saison) {
-		Carte best = null;
-		for(Iterator it = joueurVirtuel.getCartesIngredient.iterator();it.hasNext();) {
-			Carte carte = (Carte)it.next();
-			if(best==null || carte.getForce()[saison][2]) {
+	public CarteIngredient getBestCarteFor(byte saison) {
+		CarteIngredient best = null;
+		for(Iterator it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
+			CarteIngredient carte = (CarteIngredient)it.next();
+			if(best==null || carte.getForce()[Carte.ACTION_FARFADETS][saison] > best.getForce()[Carte.ACTION_FARFADETS][saison]) {
 				best = carte;
 			}
 		}
 		return best;
+	}
+
+	public byte choisirAction() {
+		return Carte.ACTION_FARFADETS;
 	}
 }

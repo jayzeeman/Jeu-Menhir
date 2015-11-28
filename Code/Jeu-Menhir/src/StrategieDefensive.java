@@ -1,3 +1,4 @@
+import java.util.Iterator;
 
 public class StrategieDefensive implements Strategie {
 	private JoueurVirtuel joueurVirtuel;
@@ -6,12 +7,29 @@ public class StrategieDefensive implements Strategie {
 		this.joueurVirtuel = joueurVirtuel;
 	}
 	
-	public CarteIngredient jouerIngredient() {
-		return null;
+	public CarteIngredient choisirIngredient(byte saison) {
+		return getBestCarteFor(saison);
 	}
 	
-	public CarteAllie jouerAllie() {
+	public CarteAllie choisirAllie(byte saison) {
 		return null;
+	}
+
+	@Override
+	public CarteIngredient getBestCarteFor(byte saison) {
+		CarteIngredient best = null;
+		for(Iterator it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
+			CarteIngredient carte = (CarteIngredient)it.next();
+			if(best==null || carte.getForce()[Carte.ACTION_GEANT][saison] > best.getForce()[Carte.ACTION_GEANT][saison]) {
+				best = carte;
+			}
+		}
+		return best;
+	}
+
+	@Override
+	public byte choisirAction() {
+		return Carte.ACTION_GEANT;
 	}
 
 }

@@ -1,11 +1,12 @@
 
 public class JoueurVirtuel extends Joueur {
-
+	private int numero;
 	private Strategie strategie;
 	
-	public JoueurVirtuel() {
+	public JoueurVirtuel(int numero) {
 		super();
 		
+		this.numero = numero;
 		// génération d'une stratégie aléatoire
 		int randomInt = (int)(Math.random() * 3);
 		if(randomInt == 0) {
@@ -17,7 +18,33 @@ public class JoueurVirtuel extends Joueur {
 		}
 	}
 	
-	public CarteIngredient jouerIngredient() {
-		return strategie.jouerIngredient();
+	public CarteIngredient choisirIngredient(byte saison) {
+		return strategie.choisirIngredient(saison);
+	}
+	
+	public CarteAllie choisirAllie(byte saison) {
+		return strategie.choisirAllie(saison);
+	}
+
+	@Override
+	public byte choisirAction() {
+		return strategie.choisirAction();
+	}
+
+	@Override
+	public Joueur choisirCible() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public String getNom() {
+		return "Ordinateur" + this.numero;
 	}
 }

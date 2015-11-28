@@ -6,6 +6,11 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 public abstract class Jeu {
+	public final static byte SAISON_PRINTEMPS = 0;
+	public final static byte SAISON_ETE = 1;
+	public final static byte SAISON_AUTOMNE = 2;
+	public final static byte SAISON_HIVER = 3;
+	
 	protected static Jeu jeu;
 	protected byte saison;
 	protected LinkedHashSet<Joueur> joueurs;
@@ -19,12 +24,20 @@ public abstract class Jeu {
 		
 		// ajout des joueurs réels
 		for(byte i=1;i<nombreJoueurs;i++) {
-			joueurs.add(new JoueurVirtuel());
+			joueurs.add(new JoueurVirtuel(i));
 		}
 		
 		jeu.genererCartes();
 		Collections.shuffle(cartesIngredient);
 		distribuerCartes();
+	}
+	
+	public byte getSaison() {
+		return saison;
+	}
+	
+	public LinkedHashSet<Joueur> getJoueurs() {
+		return joueurs;
 	}
 	
 	private void distribuerCartes() {
@@ -35,13 +48,9 @@ public abstract class Jeu {
 	}
 	
 	// Singleton
-	public Jeu demarrer(byte nombreJoueurs, boolean partieComplete) {
+	public static Jeu getInstance() {
 		if(jeu==null) {
-			if(partieComplete) {
-				jeu = new JeuComplet(nombreJoueurs);
-			} else {
-				jeu = new JeuRapide(nombreJoueurs);
-			}
+			jeu = demarrer();
 		}
 		return jeu;
 	}
@@ -50,15 +59,38 @@ public abstract class Jeu {
 		
 	}
 
-	protected void lancerTour() {
-		for(Iterator it = this.joueurs.iterator();it.hasNext();) {
-			Joueur joueur = (Joueur)it.next();
-			CarteIngredient carteJouee = joueur.jouerIngredient();
-			
+	private static Jeu demarrer() {
+		byte nombreJoueurs = 0;
+		boolean partieComplete = false;
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Entrez le nombre de joueurs : ");
+		nombreJoueurs = scanner.nextByte();
+		System.out.println("Entrez le type de partie : rapide(0) ou complète(1)");
+		partieComplete = scanner.nextByte() == 1;
+		scanner.close();
+		
+		if(partieComplete) {
+			jeu = new JeuComplet(nombreJoueurs);
+		} else {
+			jeu = new JeuRapide(nombreJoueurs);
 		}
+		return jeu;
 	}
 	
-	
+	protected void lancerTour() {
+		int compteur=0;
+		for(Iterator it = this.joueurs.iterator();it.hasNext();) {
+			Joueur joueur = (Joueur)it.next();
+			CarteIngredient carteJouee = joueur.choisirIngredient(this.saison);
+			byte action = joueur.choisirAction();
+			Joueur joueurCible = null;
+			if(action == Carte.ACTION_FARFADETS) {
+				joueurCible = joueur.choisirCible();
+			}
+			joueur.jouerIngredient(carteJouee, action, joueurCible, this.saison);
+		}
+	}
 	
 	protected void genererCartes() {
 		// générer cartes ingrédient depuis le fichier de ressources "cartesIngredient.txt"
