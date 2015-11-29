@@ -11,16 +11,16 @@ public abstract class Jeu {
 	public final static byte SAISON_AUTOMNE = 2;
 	public final static byte SAISON_HIVER = 3;
 	
+	public final static int NOMBRE_CARTE_INGREDIENT_MAIN = 4;
+	
 	protected static Jeu jeu;
 	protected byte saison;
 	protected LinkedHashSet<Joueur> joueurs;
 	protected LinkedList<CarteIngredient> cartesIngredient;
-	protected LinkedList<CarteAllie> cartesAllie;
 	
-	protected Jeu(byte nombreJoueurs) {
-		saison = 0;
+	protected Jeu(String nomJoueur, int nombreJoueurs) {
 		joueurs = new LinkedHashSet<Joueur>();
-		joueurs.add(new JoueurReel("Vous"));
+		joueurs.add(new JoueurReel(nomJoueur));
 		
 		// ajout des joueurs réels
 		for(byte i=1;i<nombreJoueurs;i++) {
@@ -28,7 +28,6 @@ public abstract class Jeu {
 		}
 		
 		jeu.genererCartes();
-		Collections.shuffle(cartesIngredient);
 		distribuerCartes();
 	}
 	
@@ -40,10 +39,12 @@ public abstract class Jeu {
 		return joueurs;
 	}
 	
-	private void distribuerCartes() {
-		for(Iterator it = this.joueurs.iterator();it.hasNext();) {
+	protected void distribuerCartes() {
+		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 			Joueur joueur = (Joueur)it.next();
-			joueur.getCartesIngredient().addAll(cartesIngredient.size()-5, cartesIngredient);
+			for(int i = 0;i<NOMBRE_CARTE_INGREDIENT_MAIN;i++) {
+				joueur.getCartesIngredient().add(cartesIngredient.poll());
+			}
 		}
 	}
 	
@@ -54,16 +55,15 @@ public abstract class Jeu {
 		}
 		return jeu;
 	}
-	
-	public void arreter() {
-		
-	}
 
 	private static Jeu demarrer() {
-		byte nombreJoueurs = 0;
+		int nombreJoueurs = 0;
 		boolean partieComplete = false;
+		String nomJoueur = "Joueur";
 		
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("Entrez votre nom : ");
+		nomJoueur = scanner.next();
 		System.out.println("Entrez le nombre de joueurs : ");
 		nombreJoueurs = scanner.nextByte();
 		System.out.println("Entrez le type de partie : rapide(0) ou complète(1)");
@@ -71,24 +71,38 @@ public abstract class Jeu {
 		scanner.close();
 		
 		if(partieComplete) {
-			jeu = new JeuComplet(nombreJoueurs);
+			jeu = new JeuComplet(nomJoueur, nombreJoueurs);
 		} else {
-			jeu = new JeuRapide(nombreJoueurs);
+			jeu = new JeuRapide(nomJoueur, nombreJoueurs);
 		}
 		return jeu;
 	}
 	
+	protected void lancerManche() {
+		for(int i=0;i<4;i++) {
+			this.saison = (byte) i;			
+			lancerTour();
+		}
+	}
+	
 	protected void lancerTour() {
-		int compteur=0;
-		for(Iterator it = this.joueurs.iterator();it.hasNext();) {
+		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 			Joueur joueur = (Joueur)it.next();
 			CarteIngredient carteJouee = joueur.choisirIngredient(this.saison);
 			byte action = joueur.choisirAction();
 			Joueur joueurCible = null;
 			if(action == Carte.ACTION_FARFADETS) {
-				joueurCible = joueur.choisirCible();
+				joueurCible = joueur.choisirCible(carteJouee);
 			}
 			joueur.jouerIngredient(carteJouee, action, joueurCible, this.saison);
+			for(Iterator<Joueur> it2 = this.joueurs.iterator();it.hasNext();) {
+				Joueur joueurParcouru = (Joueur)it2.next();
+				CarteAllie carteAllie = joueurParcouru.choisirAllie(this.saison);
+				Joueur cibleAllie = joueurParcouru.choisirCible(carteAllie);
+				if(carteAllie != null) {
+					joueurParcouru.jouerAllie(carteAllie, cibleAllie, this.saison);
+				}
+			}
 		}
 	}
 	
@@ -105,5 +119,40 @@ public abstract class Jeu {
 			cartesIngredient.add(new CarteIngredient(values[0],force));
 		}
 		scanner.close();
+		Collections.shuffle(cartesIngredient);
+	}
+	
+	protected LinkedList<Joueur> getGagnantsTour() {
+		LinkedList<Joueur> joueursCandidats = new LinkedList<Joueur>();
+		int bestMenhirs = 0;
+		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
+			Joueur joueur = (Joueur)it.next();
+			if(joueur.getNombreMenhirs() == bestMenhirs) {
+				joueursCandidats.add(joueur);
+			} else if (joueur.getNombreMenhirs() > bestMenhirs) {
+				joueursCandidats.clear();
+				joueursCandidats.add(joueur);
+				bestMenhirs = joueur.getNombreMenhirs();
+			}
+		}
+
+		if(joueursCandidats.size() > 1) {
+			LinkedList<Joueur> joueursGagnants = new LinkedList<Joueur>();
+			int bestGraines = 0;
+			
+			for(Iterator<Joueur> it = joueursCandidats.iterator();it.hasNext();) {
+				Joueur joueur = (Joueur)it.next();
+				if(joueur.getNombreGraines() == bestGraines) {
+					joueursGagnants.add(joueur);
+				} else if (joueur.getNombreMenhirs() > bestGraines) {
+					joueursGagnants.clear();
+					joueursGagnants.add(joueur);
+					bestGraines = joueur.getNombreMenhirs();
+				}
+			}
+			return joueursGagnants;
+		} else {
+			return joueursCandidats;
+		}
 	}
 }

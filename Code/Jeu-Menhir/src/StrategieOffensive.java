@@ -21,8 +21,8 @@ public class StrategieOffensive implements Strategie {
 	
 	public CarteIngredient getBestCarteFor(byte saison) {
 		CarteIngredient best = null;
-		for(Iterator it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
-			CarteIngredient carte = (CarteIngredient)it.next();
+		for(Iterator<CarteIngredient> it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
+			CarteIngredient carte = it.next();
 			if(best==null || carte.getForce()[Carte.ACTION_FARFADETS][saison] > best.getForce()[Carte.ACTION_FARFADETS][saison]) {
 				best = carte;
 			}

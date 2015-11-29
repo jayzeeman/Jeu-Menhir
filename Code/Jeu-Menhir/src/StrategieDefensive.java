@@ -18,7 +18,7 @@ public class StrategieDefensive implements Strategie {
 	@Override
 	public CarteIngredient getBestCarteFor(byte saison) {
 		CarteIngredient best = null;
-		for(Iterator it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
+		for(Iterator<CarteIngredient> it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
 			CarteIngredient carte = (CarteIngredient)it.next();
 			if(best==null || carte.getForce()[Carte.ACTION_GEANT][saison] > best.getForce()[Carte.ACTION_GEANT][saison]) {
 				best = carte;
@@ -31,5 +31,4 @@ public class StrategieDefensive implements Strategie {
 	public byte choisirAction() {
 		return Carte.ACTION_GEANT;
 	}
-
 }

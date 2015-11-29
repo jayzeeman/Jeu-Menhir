@@ -23,12 +23,20 @@ public abstract class Joueur {
 		return carteAllie;
 	}
 	
+	public void setCarteAllie(CarteAllie carte) {
+		carteAllie = carte;
+	}
+	
 	public int getNombreMenhirs() {
 		return nombreMenhirs;
 	}
 	
-	public void setNombreMenhirs(int valeur) {
-		nombreMenhirs = valeur;
+	public void ajoutMenhirs(int valeur) {
+		nombreMenhirs += valeur;
+	}
+	
+	public void perdreMenhirs(int valeur) {
+		nombreMenhirs -= valeur;
 	}
 	
 	public int getNombreGraines() {
@@ -49,30 +57,54 @@ public abstract class Joueur {
 	
 	public abstract byte choisirAction();
 	
-	public abstract Joueur choisirCible();
+	public abstract Joueur choisirCible(Carte carte);
 	
 	public abstract String getNom();
 	
-	public abstract String toString();
+	public String toString() {
+		return getNom() + " (graines : " + this.nombreGraines + ", menhirs : " + this.nombreMenhirs + ", menhirs totaux : " + this.nombreTotalMenhirs + ")";
+	}
 	
 	public void jouerIngredient(CarteIngredient carte, byte action, Joueur cible, byte saison) {
 		int valeurCarte = carte.getForce()[action][saison];
 		String message = this.getNom() + " joue une carte " + carte.getNom();
 		if(action == Carte.ACTION_GEANT) {
 			this.nombreGraines += valeurCarte;
-			message += " et l'offre au géant pour obtenir " + valeurCarte + " graines";
+			message += " et l'offre au géant pour obtenir " + valeurCarte + " graines.";
 		} else if(action == Carte.ACTION_ENGRAIS) {
 			int nombre = Math.min(valeurCarte, this.nombreGraines);
 			this.nombreMenhirs += nombre;
 			this.nombreGraines = this.nombreGraines - nombre;
-			message += " et confectionne de l'engrais magique pour obtenir " + nombre + " menhirs";
+			message += " et confectionne de l'engrais magique pour obtenir " + nombre + " menhirs.";
 		} else {
-			int nombre = Math.min(valeurCarte, cible.getNombreGraines());
+			int nombre = Math.min(valeurCarte, cible.nombreGraines);
+			message += " et soudoie les farfadets chapardeurs pour voler à " + cible.getNom() + " " + nombre + " graines.";
+			// Si le joueur
+			if(cible.carteAllie.getNom() == "CHIEN DE GARDE") {
+				nombre = Math.max(0, nombre - cible.carteAllie.getForce()[saison]);
+				message += " Mais ses chiens de gardes lui permettent de réduire le nombre de graines volées à " + nombre + ".";
+			}			
 			this.nombreGraines += nombre;
-			cible.setNombreGraines(cible.getNombreGraines() - nombre);
-			message += " et soudoie les farfadets chapardeurs pour voler à " + cible.getNom() + " " + nombre + " graines";
+			cible.nombreGraines -= nombre;
+			
 		}
 		this.cartesIngredient.remove(carte);
 		System.out.println(message);
 	}
+	
+	public void jouerAllie(CarteAllie carte, Joueur joueurCible, byte saison) {
+		int valeurCarte = carteAllie.getForce()[saison];
+		int nombre = Math.min(valeurCarte, joueurCible.nombreMenhirs);
+		String message = this.getNom() + " joue une carte " + carte.getNom() + " et détruit " + nombre + " menhirs de " + joueurCible.getNom();
+		joueurCible.perdreMenhirs(nombre);
+		System.out.println(message);
+	}
+	
+	public void reinitialiser() {
+		this.nombreTotalMenhirs += nombreMenhirs;
+		this.nombreGraines = 0;
+		this.nombreMenhirs = 0;
+	}
+
+	public abstract void choisirDebut();
 }

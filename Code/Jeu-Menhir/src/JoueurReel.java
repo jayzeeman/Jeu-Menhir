@@ -12,7 +12,7 @@ public class JoueurReel extends Joueur {
 	public CarteIngredient choisirIngredient(byte saison) {
 		byte compteur = 0;
 		System.out.println("Jouer quelle carte ?");
-		for(Iterator it = cartesIngredient.iterator();it.hasNext();) {
+		for(Iterator<CarteIngredient> it = cartesIngredient.iterator();it.hasNext();) {
 			Carte carte = (Carte)it.next();
 			System.out.println(compteur + " - " + carte.toString());
 			compteur++;
@@ -49,7 +49,7 @@ public class JoueurReel extends Joueur {
 
 	@Override
 	public byte choisirAction() {
-		byte choix = 3;
+		byte choix = -1;
 		System.out.println("Sélectionner une action à effectuer : ");
 		System.out.println("0 - Offrir la carte au géant");
 		System.out.println("1 - Planter l'engrais magique");
@@ -57,32 +57,35 @@ public class JoueurReel extends Joueur {
 		Scanner scanner = new Scanner(System.in);
 		while(choix < 0 || choix > 2) {
 			choix = scanner.nextByte();
-			scanner.close();
 		}
+		scanner.close();
 		return choix;
 	}
 
 	@Override
-	public Joueur choisirCible() {
+	public Joueur choisirCible(Carte carte) {
 		Joueur cible = null;
 		byte compteur = 0;
-		System.out.println("Sélectionner un joueur à cibler : ");
-		for(Iterator it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
-			Joueur joueur = (Joueur)it.next();
+		System.out.println("Sélectionner un joueur à cibler avec " + carte.getNom() + " :");
+		Scanner scanner = new Scanner(System.in);
+		for(Iterator<Joueur> it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
+			Joueur joueur = it.next();
 			System.out.println(compteur + " - " + joueur.toString());
 			compteur++;
 		}
+		// TODO accéder à un joueur en particulier (changer le type de collection ?)
+		scanner.close();
 		return cible;
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
 	@Override
 	public String getNom() {
 		return this.nom;
+	}
+
+	@Override
+	public void choisirDebut() {
+		// TODO Auto-generated method stub
+		
 	}
 }

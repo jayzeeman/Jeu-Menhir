@@ -1,3 +1,4 @@
+import java.util.Iterator;
 
 public class JoueurVirtuel extends Joueur {
 	private int numero;
@@ -32,19 +33,36 @@ public class JoueurVirtuel extends Joueur {
 	}
 
 	@Override
-	public Joueur choisirCible() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+	public Joueur choisirCible(Carte carte) {
+		Iterator<Joueur> iterator = Jeu.getInstance().getJoueurs().iterator();
+		Joueur best = iterator.next();
+		
+		if(carte instanceof CarteIngredient) {
+			for(Iterator<Joueur> it = iterator;it.hasNext();) {
+				Joueur joueur = it.next();
+				if(joueur.getNombreGraines() > best.getNombreGraines()) {
+					best = joueur;
+				}
+			}
+		} else if(carte instanceof CarteAllie) {
+			for(Iterator<Joueur> it = iterator;it.hasNext();) {
+				Joueur joueur = it.next();
+				if(joueur.getNombreMenhirs() > best.getNombreMenhirs()) {
+					best = joueur;
+				}
+			}
+		}
+		return best;
 	}
 	
 	@Override
 	public String getNom() {
 		return "Ordinateur" + this.numero;
+	}
+
+	@Override
+	public void choisirDebut() {
+		// TODO Auto-generated method stub
+		
 	}
 }
