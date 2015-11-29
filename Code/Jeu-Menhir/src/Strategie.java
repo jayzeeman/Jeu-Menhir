@@ -1,5 +1,7 @@
 
 public interface Strategie {
-	public void jouerIngredient();
-	public void jouerAllie();
+	public CarteIngredient choisirIngredient(byte saison);
+	public CarteAllie choisirAllie(byte saison);
+	public CarteIngredient getBestCarteFor(byte saison);
+	public byte choisirAction();
 }
