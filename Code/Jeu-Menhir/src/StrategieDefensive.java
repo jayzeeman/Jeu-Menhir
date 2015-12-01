@@ -7,24 +7,12 @@ public class StrategieDefensive implements Strategie {
 		this.joueurVirtuel = joueurVirtuel;
 	}
 	
-	public CarteIngredient choisirIngredient(byte saison) {
-		return getBestCarteFor(saison);
+	public CarteIngredient choisirIngredient(byte saison, byte action) {
+		return joueurVirtuel.getBestCarteFor(saison, action);
 	}
 	
 	public CarteAllie choisirAllie(byte saison) {
 		return null;
-	}
-
-	@Override
-	public CarteIngredient getBestCarteFor(byte saison) {
-		CarteIngredient best = null;
-		for(Iterator<CarteIngredient> it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
-			CarteIngredient carte = (CarteIngredient)it.next();
-			if(best==null || carte.getForce()[Carte.ACTION_GEANT][saison] > best.getForce()[Carte.ACTION_GEANT][saison]) {
-				best = carte;
-			}
-		}
-		return best;
 	}
 
 	@Override
