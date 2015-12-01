@@ -70,7 +70,7 @@ public abstract class Joueur {
 		String message = this.getNom() + " joue une carte " + carte.getNom();
 		if(action == Carte.ACTION_GEANT) {
 			this.nombreGraines += valeurCarte;
-			message += " et l'offre au géant pour obtenir " + valeurCarte + " graines.";
+			message += " et l'offre au gÃ©ant pour obtenir " + valeurCarte + " graines.";
 		} else if(action == Carte.ACTION_ENGRAIS) {
 			int nombre = Math.min(valeurCarte, this.nombreGraines);
 			this.nombreMenhirs += nombre;
@@ -78,11 +78,11 @@ public abstract class Joueur {
 			message += " et confectionne de l'engrais magique pour obtenir " + nombre + " menhirs.";
 		} else {
 			int nombre = Math.min(valeurCarte, cible.nombreGraines);
-			message += " et soudoie les farfadets chapardeurs pour voler à " + cible.getNom() + " " + nombre + " graines.";
+			message += " et soudoie les farfadets chapardeurs pour voler Ã  " + cible.getNom() + " " + nombre + " graines.";
 			// Si le joueur
-			if(cible.carteAllie.getNom() == "CHIEN DE GARDE") {
+			if(cible.carteAllie != null && cible.carteAllie.getNom() == "CHIEN DE GARDE") {
 				nombre = Math.max(0, nombre - cible.carteAllie.getForce()[saison]);
-				message += " Mais ses chiens de gardes lui permettent de réduire le nombre de graines volées à " + nombre + ".";
+				message += " Mais ses chiens de gardes lui permettent de rÃ©duire le nombre de graines volÃ©es Ã  " + nombre + ".";
 			}			
 			this.nombreGraines += nombre;
 			cible.nombreGraines -= nombre;
@@ -95,7 +95,7 @@ public abstract class Joueur {
 	public void jouerAllie(CarteAllie carte, Joueur joueurCible, byte saison) {
 		int valeurCarte = carteAllie.getForce()[saison];
 		int nombre = Math.min(valeurCarte, joueurCible.nombreMenhirs);
-		String message = this.getNom() + " joue une carte " + carte.getNom() + " et détruit " + nombre + " menhirs de " + joueurCible.getNom();
+		String message = this.getNom() + " joue une carte " + carte.getNom() + " et dÃ©truit " + nombre + " menhirs de " + joueurCible.getNom();
 		joueurCible.perdreMenhirs(nombre);
 		System.out.println(message);
 	}
