@@ -107,4 +107,15 @@ public abstract class Joueur {
 	}
 
 	public abstract void choisirDebut();
+	
+	public CarteIngredient getBestCarteFor(byte saison, byte action) {
+		CarteIngredient best = null;
+		for(Iterator<CarteIngredient> it = joueurVirtuel.getCartesIngredient().iterator();it.hasNext();) {
+			CarteIngredient carte = it.next();
+			if(best==null || carte.getForce()[action][saison] > best.getForce()[action][saison]) {
+				best = carte;
+			}
+		}
+		return best;
+	}
 }
