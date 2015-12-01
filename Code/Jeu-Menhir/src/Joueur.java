@@ -31,20 +31,8 @@ public abstract class Joueur {
 		return nombreMenhirs;
 	}
 	
-	public void ajoutMenhirs(int valeur) {
-		nombreMenhirs += valeur;
-	}
-	
-	public void perdreMenhirs(int valeur) {
-		nombreMenhirs -= valeur;
-	}
-	
 	public int getNombreGraines() {
 		return nombreGraines;
-	}
-	
-	public void setNombreGraines(int valeur) {
-		nombreGraines = valeur;
 	}
 	
 	public int getNombreTotalMenhirs() {
@@ -95,9 +83,8 @@ public abstract class Joueur {
 	public void jouerAllie(CarteAllie carte, Joueur joueurCible, byte saison) {
 		int valeurCarte = carteAllie.getForce()[saison];
 		int nombre = Math.min(valeurCarte, joueurCible.nombreMenhirs);
-		String message = this.getNom() + " joue une carte " + carte.getNom() + " et détruit " + nombre + " menhirs de " + joueurCible.getNom();
-		joueurCible.perdreMenhirs(nombre);
-		System.out.println(message);
+		joueurCible.nombreMenhirs -= nombre;
+		System.out.println(this.getNom() + " joue une carte " + carte.getNom() + " et détruit " + nombre + " menhirs de " + joueurCible.getNom());
 	}
 	
 	public void reinitialiser() {
