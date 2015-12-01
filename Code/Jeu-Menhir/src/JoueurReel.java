@@ -29,7 +29,7 @@ public class JoueurReel extends Joueur {
 		}
 		System.out.println("Vous disposez d'une carte alliée : ");
 		System.out.println(carte.toString());
-		if(carte.nom == "TAUPE GÉANTE") {
+		if(carte.getType() == CarteAllie.ALLIE_TAUPE){
 			System.out.println("Souhaitez-vous la jouer maintenant ? (o/n)");
 			char choix = 0;
 			choix = Clavier.readChar();
@@ -49,9 +49,8 @@ public class JoueurReel extends Joueur {
 		System.out.println("0 - Offrir une carte au géant");
 		System.out.println("1 - Confectionner de l'engrais magique");
 		System.out.println("2 - Soudoyer les farfadets");
-		while(choix < 0 || choix > 2) {
-			choix = Clavier.readByte();
-		}
+	
+		choix = Clavier.readByte();
 		return choix;
 	}
 

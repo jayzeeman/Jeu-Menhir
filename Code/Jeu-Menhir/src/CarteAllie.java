@@ -1,14 +1,23 @@
 
 public class CarteAllie extends Carte {
+	public final static byte ALLIE_TAUPE = 0;
+	public final static byte ALLIE_CHIEN = 1;
+	
 	private int[] force;
-
-	public CarteAllie(String nom, int[] force) {
+	private byte type;
+	
+	public CarteAllie(byte type, String nom, int[] force) {
 		this.nom = nom;
 		this.force = force;
+		this.type = type;
 	}
 	
 	public int[] getForce() {
 		return force;
+	}
+	
+	public byte getType() {
+		return type;
 	}
 	
 	public String toString() {

@@ -29,9 +29,9 @@ public abstract class Jeu {
 		for(byte i=1;i<nombreJoueurs;i++) {
 			joueurs.add(new JoueurVirtuel(i));
 		}
-		
+		// génération des cartes
 		this.genererCartes();
-		distribuerCartes();
+
 	}
 	
 	public byte getSaison() {
@@ -42,10 +42,14 @@ public abstract class Jeu {
 		return joueurs;
 	}
 	
+	public LinkedList<CarteIngredient> getCartesIngredient() {
+		return cartesIngredient;
+	}
+	
 	protected void distribuerCartes() {
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 			Joueur joueur = it.next();
-			for(int i = 0;i<NOMBRE_CARTE_INGREDIENT_MAIN;i++) {
+			for(int i = 0;i < NOMBRE_CARTE_INGREDIENT_MAIN;i++) {
 				joueur.getCartesIngredient().add(cartesIngredient.poll());
 			}
 		}
@@ -81,7 +85,9 @@ public abstract class Jeu {
 	
 	protected abstract void lancerJeu();
 	
-	protected void lancerManche() {		
+	protected void lancerManche() {	
+		Collections.shuffle(cartesIngredient);
+		distribuerCartes();
 		for(int i=0;i<4;i++) {
 			this.saison = (byte) i;			
 			lancerTour();
@@ -120,7 +126,6 @@ public abstract class Jeu {
 			cartesIngredient.add(new CarteIngredient(values[0],force));
 		}
 		scanner.close();
-		Collections.shuffle(cartesIngredient);
 	}
 	
 	private ArrayList<Joueur> getCandidatsTour() {

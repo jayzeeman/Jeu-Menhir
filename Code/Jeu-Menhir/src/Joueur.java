@@ -73,16 +73,17 @@ public abstract class Joueur {
 		} else {
 			int nombre = Math.min(valeurCarte, cible.nombreGraines);
 			sb.append(" et soudoie les farfadets chapardeurs pour voler à " + cible.getNom() + " " + nombre + " graines.");
-			// Si le joueur a un chien
-			if(cible.carteAllie != null && cible.carteAllie.getNom() == "CHIEN DE GARDE") {
+			// Si le joueur a un chien (sous-entendu que la partie est une partie complète)
+			if(cible.carteAllie != null && cible.carteAllie.getType() == CarteAllie.ALLIE_CHIEN){
 				nombre = Math.max(0, nombre - cible.carteAllie.getForce()[saison]);
-				sb.append(" Mais ses chiens de gardes lui permettent de rÃ©duire le nombre de graines volées à  " + nombre + ".");
+				sb.append(" Mais ses chiens de gardes lui permettent de réduire le nombre de graines volées à  " + nombre + ".");
+				cible.rangerCarte(cible.carteAllie);
 			}			
 			this.nombreGraines += nombre;
 			cible.nombreGraines -= nombre;
 			
 		}
-		this.cartesIngredient.remove(carte);
+		this.rangerCarte(carte);
 		System.out.println(sb.toString());
 	}
 	
@@ -90,7 +91,8 @@ public abstract class Joueur {
 		int valeurCarte = carteAllie.getForce()[saison];
 		int nombre = Math.min(valeurCarte, joueurCible.nombreMenhirs);
 		joueurCible.nombreMenhirs -= nombre;
-		System.out.println(this.getNom() + " joue une carte " + carte.getNom() + " et dÃ©truit " + nombre + " menhirs de " + joueurCible.getNom());
+		System.out.println(this.getNom() + " joue une carte " + carte.getNom() + " et détruit " + nombre + " menhirs de " + joueurCible.getNom());
+		
 	}
 	
 	public void reinitialiser() {
@@ -110,5 +112,15 @@ public abstract class Joueur {
 			}
 		}
 		return best;
+	}
+	
+	public void rangerCarte(CarteIngredient carte) {
+		Jeu.getInstance().getCartesIngredient().add(this.cartesIngredient.poll());
+	}
+	
+	public void rangerCarte(CarteAllie carte) {
+		JeuComplet jeu = (JeuComplet)Jeu.getInstance();
+		jeu.getCartesAllie().add(carte);
+		this.carteAllie = null;
 	}
 }

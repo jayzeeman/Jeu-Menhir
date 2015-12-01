@@ -13,14 +13,19 @@ public class JeuComplet extends Jeu {
 	public JeuComplet(String nomJoueur, int nombreJoueurs) {
 		super(nomJoueur, nombreJoueurs);
 	} 
+	
+	public LinkedList<CarteAllie> getCartesAllie() {
+		return cartesAllie;
+	}
 
 	@Override
 	protected void lancerJeu() {
 		for(numManche=0;numManche<this.joueurs.size();numManche++) {
 			for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 				Joueur joueur = it.next();
-				if(joueur.choisirDebut()==Jeu.DEBUT_GRAINES) {
+				if(joueur.choisirDebut() == Jeu.DEBUT_GRAINES) {
 					joueur.ajoutGraines(2);
+					joueur.setCarteAllie(null);
 				} else {
 					joueur.setCarteAllie(cartesAllie.poll());
 				}
@@ -64,9 +69,9 @@ public class JeuComplet extends Jeu {
 		Scanner scanner = new Scanner(is);
 		scanner.useDelimiter(";");
 		while(scanner.hasNext()) {
-			String[] values = scanner.next().split(",");
-			int[] force = {Integer.parseInt(values[1]),Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4])};
-			cartesAllie.add(new CarteAllie(values[0],force));
+			String[] values = scanner.next().replaceAll("(\\r|\\n)", "").split(",");
+			int[] force = {Integer.parseInt(values[2]),Integer.parseInt(values[3]), Integer.parseInt(values[4]), Integer.parseInt(values[5])};
+			cartesAllie.add(new CarteAllie(Byte.parseByte(values[0]),values[1],force));
 		}
 		scanner.close();
 		Collections.shuffle(cartesAllie);
