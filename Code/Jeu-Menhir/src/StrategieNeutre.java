@@ -6,8 +6,8 @@ public class StrategieNeutre implements Strategie {
 		this.joueurVirtuel = joueurVirtuel;
 	}	
 	
-	public CarteIngredient choisirIngredient(byte saison) {
-		return getBestCarteFor(saison);
+	public CarteIngredient choisirIngredient(byte saison, byte action) {
+		return getBestCarteFor(saison, action);
 	}
 	
 	public CarteAllie choisirAllie(byte saison) {
