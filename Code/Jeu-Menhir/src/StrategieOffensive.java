@@ -22,7 +22,7 @@ public class StrategieOffensive implements Strategie {
 	public byte choisirAction() {
 		byte action=0;
 		if(joueurVirtuel.getNombreGraines()>4) {
-			action = CARTE.ACTION_GEANT;
+			action = Carte.ACTION_GEANT;
 		} else {
 			action = Carte.ACTION_FARFADETS;
 		}
