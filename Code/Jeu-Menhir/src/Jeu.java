@@ -122,7 +122,7 @@ public abstract class Jeu {
 		Collections.shuffle(cartesIngredient);
 	}
 	
-	protected LinkedList<Joueur> getGagnantsTour() {
+	private LinkedList<Joueur> getCandidatsTour() {
 		LinkedList<Joueur> joueursCandidats = new LinkedList<Joueur>();
 		int bestMenhirs = 0;
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
@@ -135,6 +135,11 @@ public abstract class Jeu {
 				bestMenhirs = joueur.getNombreMenhirs();
 			}
 		}
+		return joueursCandidats;
+	}
+	
+	protected LinkedList<Joueur> getGagnantsTour() {
+		LinkedList<Joueur> joueursCandidats = this.getCandidatsTour();
 
 		if(joueursCandidats.size() > 1) {
 			LinkedList<Joueur> joueursGagnants = new LinkedList<Joueur>();
