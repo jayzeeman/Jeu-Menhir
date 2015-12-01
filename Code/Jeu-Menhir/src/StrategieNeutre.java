@@ -15,12 +15,6 @@ public class StrategieNeutre implements Strategie {
 	}
 
 	@Override
-	public CarteIngredient getBestCarteFor(byte saison) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public byte choisirAction() {
 		// TODO Auto-generated method stub
 		return 0;
