@@ -8,7 +8,7 @@ public class StrategieOffensive implements Strategie {
 	}
 	
 	public CarteIngredient choisirIngredient(byte saison, byte action) {
-		return joueurVirtuel.getBestCarteFor(saison);
+		return joueurVirtuel.getBestCarteFor(saison, action);
 	}
 	
 	public CarteAllie choisirAllie(byte saison) {
