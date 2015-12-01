@@ -1,4 +1,5 @@
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -11,41 +12,49 @@ public class JeuComplet extends Jeu {
 	
 	public JeuComplet(String nomJoueur, int nombreJoueurs) {
 		super(nomJoueur, nombreJoueurs);
-		for(numManche=0;numManche<nombreJoueurs;numManche++) {
-			// TODO proposer de prendre 2 graines ou une carte allié
-			for(Iterator<Joueur> it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
-				it.next().choisirDebut();
+	} 
+
+	@Override
+	protected void lancerJeu() {
+		for(numManche=0;numManche<this.joueurs.size();numManche++) {
+			for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
+				Joueur joueur = it.next();
+				if(joueur.choisirDebut()==Jeu.DEBUT_GRAINES) {
+					joueur.ajoutGraines(2);
+				} else {
+					joueur.setCarteAllie(cartesAllie.poll());
+				}
 			}
 			this.lancerManche();
 			
-			LinkedList<Joueur> gagnants = this.getGagnantsTour();
+			ArrayList<Joueur> gagnants = this.getGagnantsTour();
 			if(gagnants.size() == 1) {
-				System.out.println("Le gagnant de cette manche est " + gagnants.getFirst().toString());
+				System.out.println("Le gagnant de cette manche est " + gagnants.get(0).toString());
 			} else {
-				String message = "Égalité entre :";
+				String message = "�galit� entre :";
 				for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
 					message+= "\n" +(it.next().toString());
 				}
 				System.out.println(message);
 			}
 			
-			for(Iterator<Joueur> it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
+			for(Iterator<Joueur> it = joueurs.iterator();it.hasNext();) {
 				it.next().reinitialiser();
 			}
 			
 		}
-		LinkedList<Joueur> gagnants = this.getGagnantsPartie();
+		ArrayList<Joueur> gagnants = this.getGagnantsPartie();
 		if(gagnants.size() == 1) {
-			System.out.println("Le gagnant de cette partie est " + gagnants.getFirst().toString());	
+			System.out.println("Le gagnant de cette partie est " + gagnants.get(0).toString());	
 		} else {
-			String message = "Égalité entre :";
+			String message = "�galit� entre :";
 			for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
 				message+= "\n" +(it.next().toString());
 			}
 			System.out.println(message);
 		}
-	} 
-
+	}
+	
 	protected void genererCartes() {
 		super.genererCartes();
 		
@@ -53,7 +62,8 @@ public class JeuComplet extends Jeu {
 		// générer cartes allié depuis le fichier de ressource "cartesAllie.txt"
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("cartesAllie.txt");
 		Scanner scanner = new Scanner(is);
-		while(scanner.hasNextLine()) {
+		scanner.useDelimiter(";");
+		while(scanner.hasNext()) {
 			String[] values = scanner.next().split(",");
 			int[] force = {Integer.parseInt(values[1]),Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4])};
 			cartesAllie.add(new CarteAllie(values[0],force));
@@ -62,8 +72,8 @@ public class JeuComplet extends Jeu {
 		Collections.shuffle(cartesAllie);
 	}
 
-	private LinkedList<Joueur> getGagnantsPartie() {
-		LinkedList<Joueur> joueursCandidats = new LinkedList<Joueur>();
+	private ArrayList<Joueur> getGagnantsPartie() {
+		ArrayList<Joueur> joueursCandidats = new ArrayList<Joueur>();
 		int bestTotMenhirs = 0;
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 			Joueur joueur = (Joueur)it.next();
@@ -77,7 +87,7 @@ public class JeuComplet extends Jeu {
 		}
 
 		if(joueursCandidats.size() > 1) {
-			LinkedList<Joueur> joueursGagnants = new LinkedList<Joueur>();
+			ArrayList<Joueur> joueursGagnants = new ArrayList<Joueur>();
 			int bestGraines = 0;
 			
 			for(Iterator<Joueur> it = joueursCandidats.iterator();it.hasNext();) {
@@ -95,12 +105,18 @@ public class JeuComplet extends Jeu {
 			return joueursCandidats;
 		}
 	}
-
+	
 	@Override
-	protected void distribuerCartes() {
-		super.distribuerCartes();
+	protected void faireJouer(Joueur joueur) {
+		super.faireJouer(joueur);
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
-			it.next().setCarteAllie(cartesAllie.poll());
+			Joueur joueurParcouru = it.next();
+			CarteAllie carteAllie = joueurParcouru.choisirAllie(this.saison);
+			
+			if(carteAllie != null) {
+				Joueur cibleAllie = joueurParcouru.choisirCible(carteAllie);
+				joueurParcouru.jouerAllie(carteAllie, cibleAllie, this.saison);
+			}
 		}
 	}
 }

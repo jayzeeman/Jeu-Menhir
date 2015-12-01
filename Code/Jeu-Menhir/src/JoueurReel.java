@@ -1,5 +1,5 @@
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
 
 public class JoueurReel extends Joueur {
 	private String nom;
@@ -9,7 +9,7 @@ public class JoueurReel extends Joueur {
 		this.nom = nom;
 	}
 	
-	public CarteIngredient choisirIngredient(byte saison) {
+	public CarteIngredient choisirIngredient(byte saison, byte action) {
 		byte compteur = 0;
 		System.out.println("Jouer quelle carte ?");
 		for(Iterator<CarteIngredient> it = cartesIngredient.iterator();it.hasNext();) {
@@ -17,9 +17,7 @@ public class JoueurReel extends Joueur {
 			System.out.println(compteur + " - " + carte.toString());
 			compteur++;
 		}
-		Scanner scanner = new Scanner(System.in);
-		CarteIngredient carteChoisie = cartesIngredient.get(scanner.nextInt());
-		scanner.close();
+		CarteIngredient carteChoisie = cartesIngredient.get(Clavier.readInt());
 		return carteChoisie;
 	}
 	
@@ -34,47 +32,39 @@ public class JoueurReel extends Joueur {
 		if(carte.nom == "TAUPE GÉANTE") {
 			System.out.println("Souhaitez-vous la jouer maintenant ? (o/n)");
 			char choix = 0;
-			
-			while(choix != 'o' || choix != 'n') {
-				Scanner scanner = new Scanner(System.in);
-				choix = scanner.next().charAt(0);
-				scanner.close();
-				if(choix=='o') {
-					return carte;
-				}
+			choix = Clavier.readChar();
+			if(choix=='o') {
+				return carte;
 			}
+			
 		}
 		return null;
 	}
 
 	@Override
 	public byte choisirAction() {
+		System.out.println("Vous avez " + this.nombreGraines + " graines.");
 		byte choix = -1;
 		System.out.println("Sélectionner une action à effectuer : ");
-		System.out.println("0 - Offrir la carte au géant");
-		System.out.println("1 - Planter l'engrais magique");
+		System.out.println("0 - Offrir une carte au géant");
+		System.out.println("1 - Confectionner de l'engrais magique");
 		System.out.println("2 - Soudoyer les farfadets");
-		Scanner scanner = new Scanner(System.in);
 		while(choix < 0 || choix > 2) {
-			choix = scanner.nextByte();
+			choix = Clavier.readByte();
 		}
-		scanner.close();
 		return choix;
 	}
 
 	@Override
 	public Joueur choisirCible(Carte carte) {
+		ArrayList<Joueur> joueurs = Jeu.getInstance().getJoueurs();
 		Joueur cible = null;
-		byte compteur = 0;
 		System.out.println("Sélectionner un joueur à cibler avec " + carte.getNom() + " :");
-		Scanner scanner = new Scanner(System.in);
-		for(Iterator<Joueur> it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
-			Joueur joueur = it.next();
-			System.out.println(compteur + " - " + joueur.toString());
-			compteur++;
+		
+		for(int i=0;i<joueurs.size();i++) {
+			System.out.println(i + " - " + joueurs.get(i).toString());
 		}
-		// TODO accéder à un joueur en particulier (changer le type de collection ?)
-		scanner.close();
+		cible = joueurs.get(Clavier.readInt());
 		return cible;
 	}
 	
@@ -84,8 +74,12 @@ public class JoueurReel extends Joueur {
 	}
 
 	@Override
-	public void choisirDebut() {
-		// TODO Auto-generated method stub
-		
+	public byte choisirDebut() {
+		byte choix = -1;
+		System.out.println("Comment souhaitez-vous démarrer ? ");
+		System.out.println("0 - Prendre 2 graines");
+		System.out.println("1 - Piocher une carte Allié");
+		choix = Clavier.readByte();
+		return choix;
 	}
 }

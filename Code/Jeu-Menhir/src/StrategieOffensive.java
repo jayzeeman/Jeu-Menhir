@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class StrategieOffensive implements Strategie {
 	private JoueurVirtuel joueurVirtuel;
 	
@@ -8,7 +6,7 @@ public class StrategieOffensive implements Strategie {
 	}
 	
 	public CarteIngredient choisirIngredient(byte saison, byte action) {
-		return joueurVirtuel.getBestCarteFor(saison, action);
+		return joueurVirtuel.getBestCarteFor(saison, Carte.ACTION_FARFADETS);
 	}
 	
 	public CarteAllie choisirAllie(byte saison) {
@@ -21,11 +19,16 @@ public class StrategieOffensive implements Strategie {
 
 	public byte choisirAction() {
 		byte action=0;
-		if(joueurVirtuel.getNombreGraines()>4) {
-			action = Carte.ACTION_GEANT;
+		if(joueurVirtuel.getNombreGraines() > 4) {
+			action = Carte.ACTION_ENGRAIS;
 		} else {
 			action = Carte.ACTION_FARFADETS;
 		}
 		return action;
+	}
+
+	@Override
+	public byte choisirDebut() {
+		return Jeu.DEBUT_CARTE_ALLIE;
 	}
 }

@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class StrategieDefensive implements Strategie {
 	private JoueurVirtuel joueurVirtuel;
 	
@@ -17,6 +15,17 @@ public class StrategieDefensive implements Strategie {
 
 	@Override
 	public byte choisirAction() {
-		return Carte.ACTION_GEANT;
+		byte action=0;
+		if(joueurVirtuel.getNombreGraines()>4) {
+			action = Carte.ACTION_GEANT;
+		} else {
+			action = Carte.ACTION_ENGRAIS;
+		}
+		return action;
+	}
+
+	@Override
+	public byte choisirDebut() {
+		return Jeu.DEBUT_GRAINES;		
 	}
 }

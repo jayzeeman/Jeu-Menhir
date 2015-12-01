@@ -9,21 +9,21 @@ public class JoueurVirtuel extends Joueur {
 		
 		this.numero = numero;
 		// génération d'une stratégie aléatoire
-		int randomInt = (int)(Math.random() * 3);
+		int randomInt = (int)(Math.random() * 2);
 		if(randomInt == 0) {
 			strategie = new StrategieDefensive(this);
-		} else if(randomInt == 1) {
-			strategie = new StrategieOffensive(this);
 		} else {
-			strategie = new StrategieNeutre(this);
+			strategie = new StrategieOffensive(this);
 		}
 	}
 	
-	public CarteIngredient choisirIngredient(byte saison) {
-		return strategie.choisirIngredient(saison);
+	public CarteIngredient choisirIngredient(byte saison, byte action) {
+		attendre();
+		return strategie.choisirIngredient(saison, action);
 	}
 	
 	public CarteAllie choisirAllie(byte saison) {
+		attendre();
 		return strategie.choisirAllie(saison);
 	}
 
@@ -61,8 +61,15 @@ public class JoueurVirtuel extends Joueur {
 	}
 
 	@Override
-	public void choisirDebut() {
-		// TODO Auto-generated method stub
-		
+	public byte choisirDebut() {
+		return strategie.choisirDebut();
+	}
+	
+	private void attendre() {
+		try {
+			Thread.sleep((int)(Math.random()*3)+2);
+		} catch(InterruptedException e) {
+			
+		}
 	}
 }
