@@ -22,7 +22,7 @@ public abstract class Jeu {
 		joueurs = new LinkedHashSet<Joueur>();
 		joueurs.add(new JoueurReel(nomJoueur));
 		
-		// ajout des joueurs réels
+		// ajout des joueurs rÃ©els
 		for(byte i=1;i<nombreJoueurs;i++) {
 			joueurs.add(new JoueurVirtuel(i));
 		}
@@ -41,7 +41,7 @@ public abstract class Jeu {
 	
 	protected void distribuerCartes() {
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
-			Joueur joueur = (Joueur)it.next();
+			Joueur joueur = it.next();
 			for(int i = 0;i<NOMBRE_CARTE_INGREDIENT_MAIN;i++) {
 				joueur.getCartesIngredient().add(cartesIngredient.poll());
 			}
@@ -66,7 +66,7 @@ public abstract class Jeu {
 		nomJoueur = scanner.next();
 		System.out.println("Entrez le nombre de joueurs : ");
 		nombreJoueurs = scanner.nextByte();
-		System.out.println("Entrez le type de partie : rapide(0) ou complète(1)");
+		System.out.println("Entrez le type de partie : rapide(0) ou complÃ¨te(1)");
 		partieComplete = scanner.nextByte() == 1;
 		scanner.close();
 		
@@ -87,7 +87,7 @@ public abstract class Jeu {
 	
 	protected void lancerTour() {
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
-			Joueur joueur = (Joueur)it.next();
+			Joueur joueur = it.next();
 			CarteIngredient carteJouee = joueur.choisirIngredient(this.saison);
 			byte action = joueur.choisirAction();
 			Joueur joueurCible = null;
@@ -96,7 +96,7 @@ public abstract class Jeu {
 			}
 			joueur.jouerIngredient(carteJouee, action, joueurCible, this.saison);
 			for(Iterator<Joueur> it2 = this.joueurs.iterator();it.hasNext();) {
-				Joueur joueurParcouru = (Joueur)it2.next();
+				Joueur joueurParcouru = it2.next();
 				CarteAllie carteAllie = joueurParcouru.choisirAllie(this.saison);
 				Joueur cibleAllie = joueurParcouru.choisirCible(carteAllie);
 				if(carteAllie != null) {
@@ -107,7 +107,7 @@ public abstract class Jeu {
 	}
 	
 	protected void genererCartes() {
-		// générer cartes ingrédient depuis le fichier de ressources "cartesIngredient.txt"
+		// gÃ©nÃ©rer cartes ingrÃ©dient depuis le fichier de ressources "cartesIngredient.txt"
 		cartesIngredient = new LinkedList<CarteIngredient>();
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("cartesIngredient.txt");
 		Scanner scanner = new Scanner(is);
@@ -126,7 +126,7 @@ public abstract class Jeu {
 		LinkedList<Joueur> joueursCandidats = new LinkedList<Joueur>();
 		int bestMenhirs = 0;
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
-			Joueur joueur = (Joueur)it.next();
+			Joueur joueur = it.next();
 			if(joueur.getNombreMenhirs() == bestMenhirs) {
 				joueursCandidats.add(joueur);
 			} else if (joueur.getNombreMenhirs() > bestMenhirs) {
@@ -141,7 +141,7 @@ public abstract class Jeu {
 			int bestGraines = 0;
 			
 			for(Iterator<Joueur> it = joueursCandidats.iterator();it.hasNext();) {
-				Joueur joueur = (Joueur)it.next();
+				Joueur joueur = it.next();
 				if(joueur.getNombreGraines() == bestGraines) {
 					joueursGagnants.add(joueur);
 				} else if (joueur.getNombreMenhirs() > bestGraines) {
