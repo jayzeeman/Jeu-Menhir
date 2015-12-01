@@ -12,7 +12,7 @@ public class JeuComplet extends Jeu {
 	public JeuComplet(String nomJoueur, int nombreJoueurs) {
 		super(nomJoueur, nombreJoueurs);
 		for(numManche=0;numManche<nombreJoueurs;numManche++) {
-			// TODO proposer de prendre 2 graines ou une carte allié
+			// TODO proposer de prendre 2 graines ou une carte alliÃ©
 			for(Iterator<Joueur> it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
 				it.next().choisirDebut();
 			}
@@ -22,7 +22,7 @@ public class JeuComplet extends Jeu {
 			if(gagnants.size() == 1) {
 				System.out.println("Le gagnant de cette manche est " + gagnants.getFirst().toString());
 			} else {
-				String message = "Égalité entre :";
+				String message = "Ã‰galitÃ© entre :";
 				for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
 					message+= "\n" +(it.next().toString());
 				}
@@ -30,8 +30,7 @@ public class JeuComplet extends Jeu {
 			}
 			
 			for(Iterator<Joueur> it = Jeu.getInstance().getJoueurs().iterator();it.hasNext();) {
-				Joueur joueur = it.next();
-				joueur.reinitialiser();
+				it.next().reinitialiser();
 			}
 			
 		}
@@ -39,7 +38,7 @@ public class JeuComplet extends Jeu {
 		if(gagnants.size() == 1) {
 			System.out.println("Le gagnant de cette partie est " + gagnants.getFirst().toString());	
 		} else {
-			String message = "Égalité entre :";
+			String message = "Ã‰galitÃ© entre :";
 			for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
 				message+= "\n" +(it.next().toString());
 			}
@@ -51,7 +50,7 @@ public class JeuComplet extends Jeu {
 		super.genererCartes();
 		
 		cartesAllie = new LinkedList<CarteAllie>();
-		// générer cartes allié depuis le fichier de ressource "cartesAllie.txt"
+		// gÃ©nÃ©rer cartes alliÃ© depuis le fichier de ressource "cartesAllie.txt"
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("cartesAllie.txt");
 		Scanner scanner = new Scanner(is);
 		while(scanner.hasNextLine()) {
