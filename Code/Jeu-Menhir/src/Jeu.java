@@ -58,22 +58,23 @@ public abstract class Jeu {
 	// Singleton
 	public static Jeu getInstance() {
 		if(jeu==null) {
-			demarrer();
+			creer();
 		}
 		return jeu;
 	}
 
-	private static void demarrer() {
+	private static void creer() {
 		int nombreJoueurs = 0;
-		boolean partieComplete = false;
-		String nomJoueur = "Joueur";
+		boolean partieComplete;
+		String nomJoueur;
 		
 		System.out.println("Entrez votre nom : ");
 		nomJoueur = Clavier.readString();
-		System.out.println("Entrez le nombre de joueurs : ");
-		nombreJoueurs = Clavier.readInt();
-		System.out.println("Entrez le type de partie : rapide(0) ou complète(1)");
-		partieComplete = Clavier.readByte() == 1;
+		
+		nombreJoueurs = promptNombreJoueurs();
+		
+		partieComplete = promptTypePartie();
+		
 		if(partieComplete) {
 			jeu = new JeuComplet(nomJoueur, nombreJoueurs);
 		} else {
@@ -119,7 +120,7 @@ public abstract class Jeu {
 		Scanner scanner = new Scanner(is);
 		scanner.useDelimiter(";");
 		while(scanner.hasNext()) {
-			String[] values = scanner.next().split(",");
+			String[] values = scanner.nextLine().replaceAll("(\\r|\\n)", "").split(",");
 			int[][] force = {{Integer.parseInt(values[1]),Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4])},
 					{Integer.parseInt(values[5]),Integer.parseInt(values[6]),Integer.parseInt(values[7]),Integer.parseInt(values[8])},
 					{Integer.parseInt(values[9]),Integer.parseInt(values[10]),Integer.parseInt(values[11]),Integer.parseInt(values[12])}};
@@ -128,7 +129,7 @@ public abstract class Jeu {
 		scanner.close();
 	}
 	
-	private ArrayList<Joueur> getCandidatsTour() {
+	private ArrayList<Joueur> getCandidatsManche() {
 		ArrayList<Joueur> joueursCandidats = new ArrayList<Joueur>();
 		int bestMenhirs = 0;
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
@@ -144,8 +145,8 @@ public abstract class Jeu {
 		return joueursCandidats;
 	}
 	
-	protected ArrayList<Joueur> getGagnantsTour() {
-		ArrayList<Joueur> joueursCandidats = this.getCandidatsTour();
+	protected ArrayList<Joueur> getGagnantsManche() {
+		ArrayList<Joueur> joueursCandidats = this.getCandidatsManche();
 
 		if(joueursCandidats.size() > 1) {
 			ArrayList<Joueur> joueursGagnants = new ArrayList<Joueur>();
@@ -165,5 +166,42 @@ public abstract class Jeu {
 		} else {
 			return joueursCandidats;
 		}
+	}
+	
+	protected void afficherGagnantsPartie(ArrayList<Joueur> gagnants) {
+		if(gagnants.size() == 1) {
+			System.out.println("Le gagnant de la partie est " + gagnants.get(0).toString());
+		} else {
+			StringBuilder sb = new StringBuilder("Égalité entre : ");
+			for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
+				sb.append(it.next().getNom() + " - ");
+			}
+			System.out.println(sb.substring(0,sb.length()-3));
+		}
+	}
+	
+	private static int promptNombreJoueurs() {
+		int nombre;
+		System.out.println("Entrez le nombre de joueurs : ");
+		try {
+			nombre = Clavier.readInt(2,6);
+		} catch (ChoiceOutsideExpectationsException e) {
+			System.out.println(e.getMessage());
+			nombre = promptNombreJoueurs();
+		}
+		return nombre;
+	}
+	
+	private static boolean promptTypePartie() {
+		boolean partieComplete = false;
+		System.out.println("Entrez le type de partie : rapide(0) ou complète(1)");
+		byte indiceMax = 1;
+		try {
+			partieComplete = Clavier.readByte(indiceMax) == 1;
+		} catch (ChoiceOutsideExpectationsException e) {
+			System.out.println(e.getMessage());
+			partieComplete = promptTypePartie();
+		}
+		return partieComplete;
 	}
 }

@@ -1,16 +1,10 @@
 
-public class CarteAllie extends Carte {
+public abstract class CarteAllie extends Carte {
 	public final static byte ALLIE_TAUPE = 0;
 	public final static byte ALLIE_CHIEN = 1;
 	
-	private int[] force;
-	private byte type;
-	
-	public CarteAllie(byte type, String nom, int[] force) {
-		this.nom = nom;
-		this.force = force;
-		this.type = type;
-	}
+	protected int[] force;
+	protected byte type;
 	
 	public int[] getForce() {
 		return force;
@@ -36,4 +30,6 @@ public class CarteAllie extends Carte {
 		}
 		return best;
 	}
+	
+	public abstract void agir(Joueur lanceur, byte saison, Joueur cible) throws ImpossibleOperationException;
 }

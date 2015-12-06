@@ -17,7 +17,13 @@ public class JoueurReel extends Joueur {
 			System.out.println(compteur + " - " + carte.toString());
 			compteur++;
 		}
-		CarteIngredient carteChoisie = cartesIngredient.get(Clavier.readInt());
+		CarteIngredient carteChoisie;
+		try {
+			carteChoisie = cartesIngredient.get(Clavier.readInt(cartesIngredient.size()));
+		} catch (ChoiceOutsideExpectationsException e) {
+			System.out.println(e.getMessage());
+			carteChoisie = choisirIngredient(saison, action);
+		}
 		return carteChoisie;
 	}
 	
@@ -32,7 +38,13 @@ public class JoueurReel extends Joueur {
 		if(carte.getType() == CarteAllie.ALLIE_TAUPE){
 			System.out.println("Souhaitez-vous la jouer maintenant ? (o/n)");
 			char choix = 0;
-			choix = Clavier.readChar();
+			try {
+				choix = Clavier.readChar("on");
+			} catch(Exception e) {
+				System.out.println(e.getMessage());
+				return choisirAllie(saison);
+			}
+			
 			if(choix=='o') {
 				return carte;
 			}
@@ -43,14 +55,20 @@ public class JoueurReel extends Joueur {
 
 	@Override
 	public byte choisirAction() {
+		byte indiceMax = 2;
+		byte choix;
 		System.out.println("Vous avez " + this.nombreGraines + " graines.");
-		byte choix = -1;
 		System.out.println("Sélectionner une action à effectuer : ");
 		System.out.println("0 - Offrir une carte au géant");
 		System.out.println("1 - Confectionner de l'engrais magique");
 		System.out.println("2 - Soudoyer les farfadets");
-	
-		choix = Clavier.readByte();
+		try {
+			choix = Clavier.readByte(indiceMax);
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+			choix = choisirAction();
+		}
+		
 		return choix;
 	}
 
@@ -60,10 +78,17 @@ public class JoueurReel extends Joueur {
 		Joueur cible = null;
 		System.out.println("Sélectionner un joueur à cibler avec " + carte.getNom() + " :");
 		
-		for(int i=0;i<joueurs.size();i++) {
+		for(int i=1;i<joueurs.size();i++) {
 			System.out.println(i + " - " + joueurs.get(i).toString());
 		}
-		cible = joueurs.get(Clavier.readInt());
+		
+		try {
+			cible = joueurs.get(Clavier.readInt(joueurs.size()));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			cible = choisirCible(carte);
+		}
+		
 		return cible;
 	}
 	
@@ -74,11 +99,18 @@ public class JoueurReel extends Joueur {
 
 	@Override
 	public byte choisirDebut() {
-		byte choix = -1;
+		byte indiceMax = 1;
+		byte choix;
 		System.out.println("Comment souhaitez-vous démarrer ? ");
 		System.out.println("0 - Prendre 2 graines");
 		System.out.println("1 - Piocher une carte Allié");
-		choix = Clavier.readByte();
+		try {
+			choix = Clavier.readByte(indiceMax);
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+			choix = choisirDebut();
+		}
+		
 		return choix;
 	}
 }

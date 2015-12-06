@@ -23,7 +23,6 @@ public class JoueurVirtuel extends Joueur {
 	}
 	
 	public CarteAllie choisirAllie(byte saison) {
-		attendre();
 		return strategie.choisirAllie(saison);
 	}
 
@@ -40,14 +39,14 @@ public class JoueurVirtuel extends Joueur {
 		if(carte instanceof CarteIngredient) {
 			for(Iterator<Joueur> it = iterator;it.hasNext();) {
 				Joueur joueur = it.next();
-				if(joueur.getNombreGraines() > best.getNombreGraines()) {
+				if(joueur.getNombreGraines() > best.getNombreGraines() && joueur != this) {
 					best = joueur;
 				}
 			}
 		} else if(carte instanceof CarteAllie) {
 			for(Iterator<Joueur> it = iterator;it.hasNext();) {
 				Joueur joueur = it.next();
-				if(joueur.getNombreMenhirs() > best.getNombreMenhirs()) {
+				if(joueur.getNombreMenhirs() > best.getNombreMenhirs() && joueur != this) {
 					best = joueur;
 				}
 			}
@@ -67,7 +66,7 @@ public class JoueurVirtuel extends Joueur {
 	
 	private void attendre() {
 		try {
-			Thread.sleep((int)(Math.random()*3)+2);
+			Thread.sleep((int)(Math.random()+2)*2000);
 		} catch(InterruptedException e) {
 			
 		}

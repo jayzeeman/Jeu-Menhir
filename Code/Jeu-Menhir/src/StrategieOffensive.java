@@ -11,7 +11,7 @@ public class StrategieOffensive implements Strategie {
 	
 	public CarteAllie choisirAllie(byte saison) {
 		CarteAllie carte = joueurVirtuel.getCarteAllie();
-		if(carte.getNom() == "TAUPE GÉANTE" && saison == carte.bestSaison()) {
+		if(carte != null && carte instanceof CarteAllieTaupe && saison == carte.bestSaison()) {
 			return joueurVirtuel.getCarteAllie();
 		}
 		return null;
@@ -19,7 +19,7 @@ public class StrategieOffensive implements Strategie {
 
 	public byte choisirAction() {
 		byte action=0;
-		if(joueurVirtuel.getNombreGraines() > 4) {
+		if(joueurVirtuel.getNombreGraines() >= 4) {
 			action = Carte.ACTION_ENGRAIS;
 		} else {
 			action = Carte.ACTION_FARFADETS;

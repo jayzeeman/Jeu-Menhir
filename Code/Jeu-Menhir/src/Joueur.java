@@ -62,37 +62,38 @@ public abstract class Joueur {
 		int valeurCarte = carte.getForce()[action][saison];
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.getNom() + " joue une carte " + carte.getNom());
-		if(action == Carte.ACTION_GEANT) {
-			this.nombreGraines += valeurCarte;
-			sb.append(" et l'offre au géant pour obtenir " + valeurCarte + " graines.");
-		} else if(action == Carte.ACTION_ENGRAIS) {
-			int nombre = Math.min(valeurCarte, this.nombreGraines);
-			this.nombreMenhirs += nombre;
-			this.nombreGraines = this.nombreGraines - nombre;
-			sb.append(" et confectionne de l'engrais magique pour obtenir " + nombre + " menhirs.");
-		} else {
-			int nombre = Math.min(valeurCarte, cible.nombreGraines);
-			sb.append(" et soudoie les farfadets chapardeurs pour voler à " + cible.getNom() + " " + nombre + " graines.");
-			// Si le joueur a un chien (sous-entendu que la partie est une partie complète)
-			if(cible.carteAllie != null && cible.carteAllie.getType() == CarteAllie.ALLIE_CHIEN){
-				nombre = Math.max(0, nombre - cible.carteAllie.getForce()[saison]);
-				sb.append(" Mais ses chiens de gardes lui permettent de réduire le nombre de graines volées à  " + nombre + ".");
-				cible.rangerCarte(cible.carteAllie);
-			}			
-			this.nombreGraines += nombre;
-			cible.nombreGraines -= nombre;
-			
+		
+		switch(action) {
+			case Carte.ACTION_GEANT :
+				this.nombreGraines += valeurCarte;
+				sb.append(" et l'offre au géant pour obtenir " + valeurCarte + " graines.");
+				break;
+			case Carte.ACTION_ENGRAIS :
+				int nombre = Math.min(valeurCarte, this.nombreGraines);
+				this.nombreMenhirs += nombre;
+				this.nombreGraines = this.nombreGraines - nombre;
+				sb.append(" et confectionne de l'engrais magique pour obtenir " + nombre + " menhirs.");
+				break;
+			case Carte.ACTION_FARFADETS :
+				nombre = Math.min(valeurCarte, cible.nombreGraines);
+				sb.append(" et soudoie les farfadets chapardeurs pour voler à " + cible.getNom() + " " + nombre + " graines.");
+				
+				// Si le joueur a un chien (sous-entendu que la partie est une partie complète)
+				if(cible.carteAllie != null && cible.carteAllie.getType() == CarteAllie.ALLIE_CHIEN){
+					nombre = Math.max(0, nombre - cible.carteAllie.getForce()[saison]);
+					sb.append(" Mais ses chiens de gardes lui permettent de réduire le nombre de graines volées à  " + nombre + ".");
+					cible.rangerCarte(cible.carteAllie);
+				}			
+				this.nombreGraines += nombre;
+				cible.nombreGraines -= nombre;
 		}
+		
 		this.rangerCarte(carte);
 		System.out.println(sb.toString());
 	}
 	
-	public void jouerAllie(CarteAllie carte, Joueur joueurCible, byte saison) {
-		int valeurCarte = carteAllie.getForce()[saison];
-		int nombre = Math.min(valeurCarte, joueurCible.nombreMenhirs);
-		joueurCible.nombreMenhirs -= nombre;
-		System.out.println(this.getNom() + " joue une carte " + carte.getNom() + " et détruit " + nombre + " menhirs de " + joueurCible.getNom());
-		
+	public void jouerAllie(CarteAllie carte, Joueur joueurCible, byte saison) throws ImpossibleOperationException {
+		carte.agir(this, saison, joueurCible);
 	}
 	
 	public void reinitialiser() {
@@ -115,7 +116,8 @@ public abstract class Joueur {
 	}
 	
 	public void rangerCarte(CarteIngredient carte) {
-		Jeu.getInstance().getCartesIngredient().add(this.cartesIngredient.poll());
+		Jeu.getInstance().getCartesIngredient().add(carte);
+		this.cartesIngredient.remove(carte);
 	}
 	
 	public void rangerCarte(CarteAllie carte) {

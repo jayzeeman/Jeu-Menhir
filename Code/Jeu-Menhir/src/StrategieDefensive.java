@@ -16,10 +16,10 @@ public class StrategieDefensive implements Strategie {
 	@Override
 	public byte choisirAction() {
 		byte action=0;
-		if(joueurVirtuel.getNombreGraines()>4) {
-			action = Carte.ACTION_GEANT;
-		} else {
+		if(joueurVirtuel.getNombreGraines() >= 4) {
 			action = Carte.ACTION_ENGRAIS;
+		} else {
+			action = Carte.ACTION_GEANT;
 		}
 		return action;
 	}

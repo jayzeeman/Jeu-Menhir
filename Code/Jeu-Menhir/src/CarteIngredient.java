@@ -14,7 +14,7 @@ public class CarteIngredient extends Carte {
 	public String toString() {
 		String string = this.nom + " : \n ";
 		string += "\t Printemps   Été   Automne   Hiver \n";
-		string += "Géant \t" + force[0][0]  + "\t" + force[0][1] + "\t" + force[0][2] + "\t" + force[0][3] + "\n";
+		string += "Géant \t\t" + force[0][0]  + "\t" + force[0][1] + "\t" + force[0][2] + "\t" + force[0][3] + "\n";
 		string += "Engrais \t" + force[1][0]  + "\t" + force[1][1] + "\t" + force[1][2] + "\t" + force[1][3] + "\n";
 		string += "Farfadets \t" + force[2][0]  + "\t" + force[2][1] + "\t" + force[2][2] + "\t" + force[2][3] + "\n";
 		return string;

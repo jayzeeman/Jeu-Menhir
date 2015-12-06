@@ -32,32 +32,16 @@ public class JeuComplet extends Jeu {
 			}
 			this.lancerManche();
 			
-			ArrayList<Joueur> gagnants = this.getGagnantsTour();
-			if(gagnants.size() == 1) {
-				System.out.println("Le gagnant de cette manche est " + gagnants.get(0).toString());
-			} else {
-				String message = "Égalité entre :";
-				for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
-					message+= "\n" +(it.next().toString());
-				}
-				System.out.println(message);
-			}
-			
+			ArrayList<Joueur> gagnants = this.getGagnantsManche();
+			this.afficherGagnantsManche(gagnants);
+
 			for(Iterator<Joueur> it = joueurs.iterator();it.hasNext();) {
 				it.next().reinitialiser();
 			}
 			
 		}
 		ArrayList<Joueur> gagnants = this.getGagnantsPartie();
-		if(gagnants.size() == 1) {
-			System.out.println("Le gagnant de cette partie est " + gagnants.get(0).toString());	
-		} else {
-			String message = "Égalité entre :";
-			for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
-				message+= "\n" +(it.next().toString());
-			}
-			System.out.println(message);
-		}
+		this.afficherGagnantsPartie(gagnants);
 	}
 	
 	protected void genererCartes() {
@@ -69,9 +53,14 @@ public class JeuComplet extends Jeu {
 		Scanner scanner = new Scanner(is);
 		scanner.useDelimiter(";");
 		while(scanner.hasNext()) {
-			String[] values = scanner.next().replaceAll("(\\r|\\n)", "").split(",");
+			String[] values = scanner.nextLine().replaceAll("(\\r|\\n)", "").split(",");
 			int[] force = {Integer.parseInt(values[2]),Integer.parseInt(values[3]), Integer.parseInt(values[4]), Integer.parseInt(values[5])};
-			cartesAllie.add(new CarteAllie(Byte.parseByte(values[0]),values[1],force));
+			byte type = Byte.parseByte(values[0]);
+			if(type==CarteAllie.ALLIE_TAUPE) {
+				cartesAllie.add(new CarteAllieTaupe(values[1],force));
+			} else {
+				cartesAllie.add(new CarteAllieChien(values[1], force));
+			}
 		}
 		scanner.close();
 		Collections.shuffle(cartesAllie);
@@ -82,12 +71,12 @@ public class JeuComplet extends Jeu {
 		int bestTotMenhirs = 0;
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 			Joueur joueur = (Joueur)it.next();
-			if(joueur.getNombreMenhirs() == bestTotMenhirs) {
+			if(joueur.getNombreTotalMenhirs() == bestTotMenhirs) {
 				joueursCandidats.add(joueur);
-			} else if (joueur.getNombreMenhirs() > bestTotMenhirs) {
+			} else if (joueur.getNombreTotalMenhirs() > bestTotMenhirs) {
 				joueursCandidats.clear();
 				joueursCandidats.add(joueur);
-				bestTotMenhirs = joueur.getNombreMenhirs();
+				bestTotMenhirs = joueur.getNombreTotalMenhirs();
 			}
 		}
 
@@ -114,14 +103,33 @@ public class JeuComplet extends Jeu {
 	@Override
 	protected void faireJouer(Joueur joueur) {
 		super.faireJouer(joueur);
+		
 		for(Iterator<Joueur> it = this.joueurs.iterator();it.hasNext();) {
 			Joueur joueurParcouru = it.next();
 			CarteAllie carteAllie = joueurParcouru.choisirAllie(this.saison);
 			
 			if(carteAllie != null) {
-				Joueur cibleAllie = joueurParcouru.choisirCible(carteAllie);
-				joueurParcouru.jouerAllie(carteAllie, cibleAllie, this.saison);
+				try {
+					Joueur cibleAllie = joueurParcouru.choisirCible(carteAllie);
+					joueurParcouru.jouerAllie(carteAllie, cibleAllie, this.saison);
+				} catch(ImpossibleOperationException e) {
+					System.out.println(e.getMessage());
+				}
+				
 			}
+		}
+	}
+	
+	private void afficherGagnantsManche(ArrayList<Joueur> gagnants) {
+		if(gagnants.size() == 1) {
+			System.out.println("Le gagnant de cette manche est " + gagnants.get(0).toString());	
+		} else {
+			StringBuilder sb = new StringBuilder("Égalité entre : ");
+			for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
+				sb.append(it.next().getNom() + " - ");
+			}
+			
+			System.out.println(sb.substring(0,sb.length()-3));
 		}
 	}
 }
