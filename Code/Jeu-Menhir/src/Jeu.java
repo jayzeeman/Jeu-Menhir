@@ -25,11 +25,11 @@ public abstract class Jeu {
 		joueurs = new ArrayList<Joueur>();
 		joueurs.add(new JoueurReel(nomJoueur));
 		
-		// ajout des joueurs réels
+		// ajout des joueurs rÃ©els
 		for(byte i=1;i<nombreJoueurs;i++) {
 			joueurs.add(new JoueurVirtuel(i));
 		}
-		// g�n�ration des cartes
+		// génération des cartes
 		this.genererCartes();
 
 	}
@@ -114,7 +114,7 @@ public abstract class Jeu {
 	}
 	
 	protected void genererCartes() {
-		// générer cartes ingrédient depuis le fichier de ressources "cartesIngredient.txt"
+		// gÃ©nÃ©rer cartes ingrÃ©dient depuis le fichier de ressources "cartesIngredient.txt"
 		cartesIngredient = new LinkedList<CarteIngredient>();
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("cartesIngredient.txt");
 		Scanner scanner = new Scanner(is);
@@ -156,10 +156,10 @@ public abstract class Jeu {
 				Joueur joueur = it.next();
 				if(joueur.getNombreGraines() == bestGraines) {
 					joueursGagnants.add(joueur);
-				} else if (joueur.getNombreMenhirs() > bestGraines) {
+				} else if (joueur.getNombreGraines() > bestGraines) {
 					joueursGagnants.clear();
 					joueursGagnants.add(joueur);
-					bestGraines = joueur.getNombreMenhirs();
+					bestGraines = joueur.getNombreGraines();
 				}
 			}
 			return joueursGagnants;
@@ -172,7 +172,7 @@ public abstract class Jeu {
 		if(gagnants.size() == 1) {
 			System.out.println("Le gagnant de la partie est " + gagnants.get(0).toString());
 		} else {
-			StringBuilder sb = new StringBuilder("�galit� entre : ");
+			StringBuilder sb = new StringBuilder("Égalité entre : ");
 			for(Iterator<Joueur> it = gagnants.iterator();it.hasNext();) {
 				sb.append(it.next().getNom() + " - ");
 			}
@@ -194,7 +194,7 @@ public abstract class Jeu {
 	
 	private static boolean promptTypePartie() {
 		boolean partieComplete = false;
-		System.out.println("Entrez le type de partie : rapide(0) ou compl�te(1)");
+		System.out.println("Entrez le type de partie : rapide(0) ou complète(1)");
 		byte indiceMax = 1;
 		try {
 			partieComplete = Clavier.readByte(indiceMax) == 1;
